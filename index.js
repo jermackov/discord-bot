@@ -66,24 +66,18 @@ client.on("messageCreate", async (message) => {
   }
 });
 
-// Willkommensnachricht, wenn ein Mitglied dem Server beitritt
 client.on("guildMemberAdd", async (member) => {
-  // Begrüßungskanal suchen (z. B. Kanal mit dem Namen 'ori')
   const welcomeChannel = member.guild.channels.cache.find(
     (channel) => channel.name === "ori" && channel.isTextBased()
   );
 
-  if (!welcomeChannel) return; // Falls der Kanal nicht existiert
+  if (!welcomeChannel) return;
 
-  const welcomeEmbed = new EmbedBuilder()
-    .setTitle("QUAK QUAK!") // große, fette Überschrift
-    .setDescription(
-      "Jagiii!!! Ich freu mich, dass du endlich hier bist!\n" +
-      `Willkommen auf **${member.guild.name}**.`
-    )
-    .setColor(0x00ff7f);
-
-  await welcomeChannel.send({ embeds: [welcomeEmbed] });
+  welcomeChannel.send(
+    `🎉 **QUAK QUAK!**\n\n` +
+    `Jagiii!!! Ich freu mich, dass du endlich hier bist!\n` +
+    `Willkommen auf **${member.guild.name}**.`
+  );
 });
 
 client.on("ready", () => {
