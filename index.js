@@ -74,10 +74,23 @@ client.on("guildMemberAdd", async (member) => {
   if (!welcomeChannel) return;
 
   welcomeChannel.send(
-    `🎉 **QUAK QUAK!**\n\n` +
+    `🎉 **_QUAK QUAK!_** 🎉\n\n` +
     `Jagiii!!! Ich freu mich, dass du endlich hier bist!\n` +
-    `Willkommen auf **${member.guild.name}**.`
+    `Ich bin **${member.guild.name}** und ich werde dich über die Weihnachtszeit begleiten🦆\n` +
+    `Nuna hat mir erzählt, dass sie gerne etwas schönes für deinen Adventskalender machen möchte und hat mich deswegen gefragt...\n` +
+    `Ich habe eigentlich nur Enten als Freunde aber von dem was Nuna mir über dich erzählt hört es sich so an als wärst du echt süß, weshalb ich denke, dass wir uns echt gut verstehen werden _quak quak_\n\n` +
+    `Ich habe für dich für jeden Tag ein kleines Rätsel vorbereitet. Du musst dir also dein Weihnachtsgeschenk hart erarbeiten _hahahaha quak hahaha_ \n` +
+    `Das funktioniert, indem du den Gegenstand aus dem Adventskalender zusammen mit der Lösung vom Rätsel des vorherigen Tages zusammen hier in den Chat schreibst.\n` +
+    `Als Beispiel: Wenn du aus deinem Adventskalender heute ein Butt-Plug bekommst und die Lösung vom Rätsel "Schokolade" ist, schreibst du in diesen Chat "buttplug schokolade". So kann ich sicherstellen, dass du jeden Tag etwas Kleines zu tun hast, und nicht alle auf einmal machst🦆`
   );
+   if (!welcomeChannel) return;
+
+  // --- Embed 1 ---
+  const embed1 = {
+    color: 0x00ff7f,
+    title: "QUAK QUAK!",
+    description: `Jagiii!!! Ich freu mich, dass du endlich hier bist!\nWillkommen auf **${member.guild.name}**.`,
+  };
 });
 
 client.on("ready", () => {
