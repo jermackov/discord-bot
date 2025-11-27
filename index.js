@@ -68,20 +68,23 @@ client.on("messageCreate", async (message) => {
 
 // Willkommensnachricht, wenn ein Mitglied dem Server beitritt
 client.on("guildMemberAdd", async (member) => {
-  // Begrüßungskanal suchen (z. B. Kanal mit dem Namen 'welcome')
+  // Begrüßungskanal suchen (z. B. Kanal mit dem Namen 'ori')
   const welcomeChannel = member.guild.channels.cache.find(
-    (channel) => channel.name === "ori" && channel.isTextBased(),
+    (channel) => channel.name === "ori" && channel.isTextBased()
   );
 
- const welcomeEmbed = new EmbedBuilder()
-  .setTitle('QUAK QUAK!')
-  .setDescription(
-    `Jagiii!!! Ich freu mich, dass du endlich hier bist!\n` +
-    `Willkommen auf **${member.guild.name}**.`
-  )
-  .setColor(0x00ff7f);
+  if (!welcomeChannel) return; // Falls der Kanal nicht existiert
 
-welcomeChannel.send({ embeds: [welcomeEmbed] });
+  const welcomeEmbed = new EmbedBuilder()
+    .setTitle("QUAK QUAK!") // große, fette Überschrift
+    .setDescription(
+      "Jagiii!!! Ich freu mich, dass du endlich hier bist!\n" +
+      `Willkommen auf **${member.guild.name}**.`
+    )
+    .setColor(0x00ff7f);
+
+  await welcomeChannel.send({ embeds: [welcomeEmbed] });
+});
 
 client.on("ready", () => {
   console.log("Bot is ready!");
