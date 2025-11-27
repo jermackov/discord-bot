@@ -81,14 +81,14 @@ client.on("guildMemberAdd", async (member) => {
     `Ich habe eigentlich nur Enten als Freunde aber von dem was Nuna mir über dich erzählt hört es sich so an als wärst du echt süß, weshalb ich denke, dass wir uns echt gut verstehen werden _quak quak_\n\n` +
     `Ich habe für dich für jeden Tag ein kleines Rätsel vorbereitet. Du musst dir also dein Weihnachtsgeschenk hart erarbeiten _hahahaha quak hahaha_ \n` +
     `Das funktioniert, indem du den Gegenstand aus dem Adventskalender zusammen mit der Lösung vom Rätsel des vorherigen Tages zusammen hier in den Chat schreibst.\n` +
-    `Als Beispiel: Wenn du aus deinem Adventskalender heute ein Butt-Plug bekommst und die Lösung vom Rätsel "Schokolade" ist, schreibst du in diesen Chat "buttplug schokolade". So kann ich sicherstellen, dass du jeden Tag etwas Kleines zu tun hast, und nicht alle auf einmal machst🦆`
+    `Als Beispiel: Wenn du aus deinem Adventskalender heute ein Butt-Plug bekommst und die Lösung vom Rätsel "Schokolade" ist, schreibst du in diesen Chat "buttplug schokolade". So kann ich sicherstellen, dass du jeden Tag etwas Kleines zu tun hast, und nicht alle auf einmal machst🦆 Die heutige Lösung passt zusammen mit dem morgigen Gegenstand`
   );
    if (!welcomeChannel) return;
 
   // --- Embed 1 ---
   const embed1 = {
     color: 0x00ff7f,
-    title: "Tag 1",
+    title: "Tag 1: Jeder Weg hat seinen Anfang",
     description: `Heute vor 11 Monaten hat sich euer Leben stark verändert, als ihr das erste Mal Magic Mushrooms probiert habt. Außerdem, heute vor genau 7 Monaten habt ihr das legendäre Tetris Video entdeckt, während ihr Balls am trippen wart, wodurch ihr ein perfektes Video zum Hochkommen gefunden habt. Deshalb will ich dir heute diese süßen Tetris-Gummibärchen schenken. Aber nur zuschen ist doch bisschen lagweilig oder nicht~?\n` +
    `Deine Aufgabe heute ist, auf tetr.io zu gehen, dich anzumelden und bei dem Blitz-Modus möglichst nah an 15000 Punkte heranzukommen. Die Lösung ist der der globale prezentuale TOP Wert. Viel Erfolg!  `
   };
