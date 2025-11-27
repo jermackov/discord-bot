@@ -98,7 +98,7 @@ Wenn sie sich wohlfühlen, zeigen sie es dir im Frühling oder Sommer mit hübsc
 // ------------------------------------------------------
 
 if (
-  message.content.toLowerCase() === "handcreme weihnachtszeit" ||
+ message.content.toLowerCase() === "handcreme weihnachtszeit" ||
   message.content.toLowerCase() === "vaseline weihnachtszeit"
 ) {
     const text = `Hallo Jagi, ich hoffe, du hast gut geschlafen :)
