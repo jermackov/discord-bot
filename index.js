@@ -80,7 +80,12 @@ client.on("guildMemberAdd", async (member) => {
 
   // Nachricht senden
   welcomeChannel.send(
-    `🎉 Willkommen auf **${member.guild.name}**, *quak quak* Jagi! Ich freu mich, dass du endlich hier bist!.`,
+
+**\`\`\`
+QUAK QUAK!
+\`\`\`**
+    
+    `Jagiii!!!! Ich freu mich, dass du endlich hier bist! Willkommen auf **${member.guild.name}** .`,
   );
 });
 
