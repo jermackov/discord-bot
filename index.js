@@ -94,7 +94,7 @@ Wenn sie sich wohlfühlen, zeigen sie es dir im Frühling oder Sommer mit hübsc
     return; // verhindert alles weitere für diese Message
   }
 
-});
+
   
 
 client.on("guildMemberAdd", async (member) => {
