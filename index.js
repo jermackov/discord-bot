@@ -13,7 +13,7 @@ app.listen(PORT, () => {
 
 const { REST } = require("@discordjs/rest");
 const { Routes } = require("discord-api-types/v9");
-const { Client, GatewayIntentBits, AttachmentBuilder } = require("discord.js");
+const { Client, GatewayIntentBits, AttachmentBuilder, EmbedBuilder } = require('discord.js');
 
 // Client mit den benötigten Intents erstellen
 const client = new Client({
@@ -73,21 +73,15 @@ client.on("guildMemberAdd", async (member) => {
     (channel) => channel.name === "ori" && channel.isTextBased(),
   );
 
-  if (!welcomeChannel) {
-    console.log("Kein Begrüßungskanal gefunden.");
-    return;
-  }
+ const welcomeEmbed = new EmbedBuilder()
+  .setTitle('QUAK QUAK!')
+  .setDescription(
+    `Jagiii!!! Ich freu mich, dass du endlich hier bist!\n` +
+    `Willkommen auf **${member.guild.name}**.`
+  )
+  .setColor(0x00ff7f);
 
-  // Nachricht senden
-  welcomeChannel.send(
-
-`**\`\`\`
-QUAK QUAK!
-\`\`\`**
-    
-    `Jagiii!!!! Ich freu mich, dass du endlich hier bist! Willkommen auf **${member.guild.name}** .`,
-  );
-});
+welcomeChannel.send({ embeds: [welcomeEmbed] });
 
 client.on("ready", () => {
   console.log("Bot is ready!");
