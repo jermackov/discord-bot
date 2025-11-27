@@ -94,6 +94,38 @@ Wenn sie sich wohlfühlen, zeigen sie es dir im Frühling oder Sommer mit hübsc
 });
 
 // ------------------------------------------------------
+// DAY 2
+// ------------------------------------------------------
+
+if (
+  message.content.toLowerCase() === "handcreme weihnachtszeit" ||
+  message.content.toLowerCase() === "vaseline weihnachtszeit"
+) {
+    const text = `Hallo Jagi, ich hoffe, du hast gut geschlafen :)
+
+Nuna hat mir erzählt, dass sie unbedingt mit dir zusammenziehen will und zusammen mit dir eine Ente als Haustier holen will, aber dass das wahrscheinlich noch sehr lange nicht möglich sein wird. Das zu hören hat mich echt ein bisschen traurig gemacht, weshalb ich eine süße Alternative für euch habe.
+
+Diese Pflanze ist nicht einfach irgendeine Pflanze. Das ist eine Sukkul*ente* 🥰. Solange ihr euch keine richtige Ente holen könnt, ist diese Ente solange euer Haustier.
+
+Ich habe gehört, dass du dir Sorgen machst, dass du dich nicht gut um Pflanzen kümmern kannst. Bei Sukkulenten ist das kein Problem! Sie sind sehr pflegeleichte Pflanzen, da sie nur wenig Wasser benötigen, viel Licht bevorzugen und auch in kleineren Töpfen problemlos wachsen.
+
+Wenn sie sich wohlfühlen, zeigen sie es dir im Frühling oder Sommer mit hübschen Blüten, die an langen Stielen erscheinen – ein kleines Dankeschön dafür, dass du sie so entspannt und liebevoll behandelst ♥️ Wenn du sehr nett zu ihr bist, lernt sie ja vielleicht auch zu quaken.`;
+
+    await message.reply(text);
+
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 2: Dampfmaschine")
+      .setDescription("test");
+
+    await message.channel.send({ embeds: [embed1] });
+
+    return;
+  }
+});
+
+
+// ------------------------------------------------------
 // MEMBER JOIN EVENT
 // ------------------------------------------------------
 
