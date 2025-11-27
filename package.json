@@ -1,23 +1,16 @@
 {
-  "name": "nodejs",
+  "name": "discord-bot",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
-    "@discordjs/rest": "^2.4.2",
-    "@types/node": "^18.0.6",
-    "discord-api-types": "^0.37.115",
-    "discord.js": "^14.17.2",
-    "node-schedule": "^2.1.1"
-  },
-  "devDependencies": {
-    "node": "^16.20.2"
-  },
-  "description": ""
+    "discord.js": "^14.13.0",
+    "@discordjs/rest": "^2.0.1",
+    "discord-api-types": "^0.37.56"
+  }
 }
