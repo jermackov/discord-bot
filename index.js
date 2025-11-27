@@ -81,7 +81,7 @@ client.on("guildMemberAdd", async (member) => {
   // Nachricht senden
   welcomeChannel.send(
 
-**\`\`\`
+`**\`\`\`
 QUAK QUAK!
 \`\`\`**
     
