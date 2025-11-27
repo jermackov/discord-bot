@@ -65,8 +65,11 @@ client.on("messageCreate", async (message) => {
     message.reply("I am just a bot, but I am doing great! How about you?");
   }
   
-//Day 2
-if (message.content.toLowerCase() === "pflanze 70") {
+// Day 2
+client.on("messageCreate", async (message) => {
+  if (message.author.bot) return;
+
+  if (message.content.toLowerCase() === "pflanze 70") {
     const text = `Hallo Jagi, ich hoffe, du hast gut geschlafen :)
 
 Nuna hat mir erzählt, dass sie unbedingt mit dir zusammenziehen will und zusammen mit dir eine Ente als Haustier holen will, aber dass das wahrscheinlich noch sehr lange nicht möglich sein wird. Das zu hören hat mich echt ein bisschen traurig gemacht, weshalb ich eine süße Alternative für euch habe.
@@ -77,19 +80,21 @@ Ich habe gehört, dass du dir Sorgen machst, dass du dich nicht gut um Pflanzen 
 
 Wenn sie sich wohlfühlen, zeigen sie es dir im Frühling oder Sommer mit hübschen Blüten, die an langen Stielen erscheinen – ein kleines Dankeschön dafür, dass du sie so entspannt und liebevoll behandelst ♥️ Wenn du sehr nett zu ihr bist, lernt sie ja vielleicht auch zu quaken.`;
 
- await message.reply(text);
-    return; // damit danach nichts anderes mehr ausgeführt wird
+    await message.reply(text);
+
+    // Direkt DANACH Embed senden
+    const embed1 = {
+      color: 0x00ff7f,
+      title: "Tag 2: Dampfmaschine",
+      description: `test`,
+    };
+
+    await message.channel.send({ embeds: [embed1] });
+
+    return; // verhindert alles weitere für diese Message
   }
+
 });
-
-  return; // verhindert, dass weiterer Code ausgeführt wird
-}
-
-// Embed danach
-const embed1 = {
-  color: 0x00ff7f,
-  title: "Tag 2: Dampfmaschine",
-  description: `test`,
   
 
 client.on("guildMemberAdd", async (member) => {
