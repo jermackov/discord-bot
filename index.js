@@ -150,11 +150,10 @@ client.on("messageCreate", async (message) => {
 
   const content = message.content.toLowerCase();
 
-  // Trigger-Wort prüfen
-  if (content === "minecraft egzw") {
-    const text = `Selam aleykum Jagi, ich hoffe du hast heute schön gebetet.
-Gute Arbeit bei der letzten Aufgabe, es ist sehr beeindruckend, dass du weißt wie Gras in welchem Land aussieht!! 
-Als Belohnung möchte ich dir diese Kekse schenken. Vielleicht kannst du ja ein paar Enten damit füttern :)`;
+ if (content === "minecraft egzw") {
+    const text = `selam aleykum Jagi, ich hoffe du hast heute schön gebetet.
+
+Gute Arbeit bei der letzten Aufgabe, es ist sehr beeindruckend, dass du weißt wie Gras in welchem Land aussieht!! Als Belohnung möchte ich dir diese Kekse schenken. Vielleicht kannst du ja ein paar Enten damit füttern :)`;
 
     // normale Antwort
     await message.reply(text);
@@ -166,18 +165,15 @@ Als Belohnung möchte ich dir diese Kekse schenken. Vielleicht kannst du ja ein 
       .setDescription(
         "Du bist gefangen in einem Raum. Dein Ziel ist es herauszukommen " +
         "und herauszufinden, in welcher Stadt du dich befindest.\n\n" +
-        'IP: **"jagi.aternos.me"**'
+        "IP: **jagi.aternos.me**"
       );
 
     // Embed senden
     await message.channel.send({ embeds: [embed1] });
 
-    // danach nichts mehr für diese Nachricht ausführen
+    // nichts anderes mehr für diese Nachricht ausführen
     return;
   }
-
-  // HIER können danach deine anderen message-Checks stehen
-  // z.B. if (content === "hello") { ... }
 });
 
 
