@@ -151,7 +151,7 @@ client.on("messageCreate", async (message) => {
   const content = message.content.toLowerCase();
 
  if (content === "minecraft egzv") {
-    const text = `selam aleykum Jagi, ich hoffe du hast heute schön gebetet.
+    const text = `Selam aleykum Jagi, ich hoffe du hast heute schön gebetet.
 
 Gute Arbeit bei der letzten Aufgabe, es ist sehr beeindruckend, dass du weißt wie Gras in welchem Land aussieht!! Als Belohnung möchte ich dir diese Kekse schenken. Vielleicht kannst du ja ein paar Enten damit füttern :)`;
 
