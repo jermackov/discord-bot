@@ -106,9 +106,9 @@ client.on("messageCreate", async (message) => {
     content === "handcreme weihnachtszeit" ||
     content === "vaseline weihnachtszeit"
   ) {
-    const text = `Guten Morgen Jagi, ich hoffe du hast schön geträumt *quak* 
+    const text = `Guten Morgen Jagi, ich hoffe du hast schön geträumt *quak*
 
-Da es zurzeit sehr kalt ist, darfst du nicht vergessen, dich um deine Haut zu kümmern! Vor allem deine Lippen müssen weich bleiben, damit Nuna nicht verletzt wird beim Küssen.`;
+Da es zurzeit sehr kalt ist, darfst du nicht vergessen, dich um deine Haut zu kümmern! Vor allem deine Lippen müssen weich bleiben, damit Nuna nicht verletzt wird beim Küssen. Obwohl egal wie deine Hände oder Lippen aussehen, Nuna würde dich immer lieben`;
 
     // normale Antwort
     await message.reply(text);
