@@ -106,7 +106,7 @@ client.on("messageCreate", async (message) => {
     content === "handcreme weihnachtszeit" ||
     content === "vaseline weihnachtszeit"
   ) {
-    const text = `Guten Morgen Jagi, ich hoffe du hast schön geträumt *quak* 😊
+    const text = `Guten Morgen Jagi, ich hoffe du hast schön geträumt *quak* 
 
 Da es zurzeit sehr kalt ist, darfst du nicht vergessen, dich um deine Haut zu kümmern! Vor allem deine Lippen müssen weich bleiben, damit Nuna nicht verletzt wird beim Küssen.`;
 
@@ -120,7 +120,7 @@ Da es zurzeit sehr kalt ist, darfst du nicht vergessen, dich um deine Haut zu k�
       .setDescription(
         "Mir wurde erzählt, dass letztes Jahr im Adventskalender die GeoGuessr-Aufgabe zu leicht für dich war. Deswegen dieses Mal ein bisschen schwerer hehe. " +
         "Dieses Foto wurde an einem Flughafen geschossen. Jeder Flughafen auf der Welt hat einen sogenannten ICAO-Code. " +
-        "Dein Ziel ist es, den Code von diesem Flughafen herauszufinden. 🙂"
+        "Dein Ziel ist es, den Code von diesem Flughafen herauszufinden"
       );
 
     // Erst das Embed schicken
