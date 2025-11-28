@@ -85,7 +85,7 @@ Wenn sie sich wohlfühlen, zeigen sie es dir im Frühling oder Sommer mit hübsc
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
       .setTitle("Tag 2: Dampfmaschine")
-      .setDescription("test");
+      .setDescription("Dein wahrer Wohnort ist nicht wo du denkst, dass er ist. Du findest ihn ihm Dampf umhüllt. Du musst diesen Ort auf der Karte ohne kreise aufsuchen. Dort werde ich auf dich warten. ");
 
     await message.channel.send({ embeds: [embed1] });
 
@@ -106,16 +106,30 @@ client.on("messageCreate", async (message) => {
     content === "handcreme weihnachtszeit" ||
     content === "vaseline weihnachtszeit"
   ) {
-    const text = `testtest.`;
+    const text = `Guten Morgen Jagi, ich hoffe du hast schön geträumt *quak*
+    
+    Da es zu zeit sehr kalt ist, darfst du nicht vergessen dich um deine Haut zu kümmern! Vor allem; deine Lippen müssen weich bleiben damit Nuna nicht verletzt wird beim küssen.  `;
 
     await message.reply(text);
 
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
-      .setTitle("Tag 3: xxx")
-      .setDescription("test");
+      .setTitle("Tag 3: Geoguessr extreme")
+      .setDescription("Mir wurde erzählt, dass letztes Jahr im Adventskalender die GeoGuessr-Aufgabe zu leicht für dich war. Deswegen dieses Mal bisschen schwerer hehe Dieses Foto wurde an einem Flughafen geschossen. Jeder Flughafen auf der Welt hat ein sogenannten ICAO-Code. Dein Ziel ist es den Code von diesem Flughafen herauszufinden :) ");
 
-    await message.channel.send({ embeds: [embed1] });
+    
+
+    await message.channel.send({ embeds: [embed1] 
+                               
+// Datei laden (dein ZIP)
+      
+const zipFile = new AttachmentBuilder("C:/Users/jerma/Documents/Ideas/foggy_field.zip");
+
+await message.channel.send({
+  embeds: [embed1],
+  files: [zipFile]
+
+});
 
     return; // nichts weiteres für diese Nachricht ausführen
   }
