@@ -119,7 +119,7 @@ Da es zurzeit sehr kalt ist, darfst du nicht vergessen, dich um deine Haut zu k�
       .setTitle("Tag 3: Geoguessr extreme")
       .setDescription(
         "Mir wurde erzählt, dass letztes Jahr im Adventskalender die GeoGuessr-Aufgabe zu leicht für dich war. Deswegen dieses Mal ein bisschen schwerer hehe. " +
-        "Dieses Foto wurde an einem Flughafen geschossen. Jeder Flughafen auf der Welt hat einen sogenannten ICAO-Code. " +
+        "Dieses Foto wurde an einem Flughafen geschossen. Jeder Flughafen auf der Welt hat einen spezifischen viertelligen ICAO-Code. " +
         "Dein Ziel ist es, den Code von diesem Flughafen herauszufinden"
       );
 
@@ -138,6 +138,51 @@ Da es zurzeit sehr kalt ist, darfst du nicht vergessen, dich um deine Haut zu k�
 
   // hier kommen deine anderen message-Checks (hello, how are you, zip, …)
 });
+
+
+// ------------------------------------------------------
+// DAY 4
+// ------------------------------------------------------
+
+client.on("messageCreate", async (message) => {
+  if (message.author.bot) return; // Bots ignorieren
+
+  const content = message.content.toLowerCase();
+
+  if (
+    content === "minecraft EGZV"
+  ) {
+    const text = `Selam aleykum Jagi, ich hoffe du hast heute schon gebetet.
+Gute Arbeit bei der letzten Aufgabe, es ist sehr beeindrucken, dass du weißt wie Gras in welchem Land aussieht!! Als Belohnung möchte ich dir diese Kekse schenken. Vielleicht kannst du ja paar enten damit füttern :) `;
+
+    // normale Antwort
+    await message.reply(text);
+
+    // Embed bauen
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 4: Escape room")
+      .setDescription(
+        "Du bist gefangen in einem Raum. Dein Ziel ist es herauszukommen und herauszufinden in welcher Stadt du dich befindest.\n \n " +
+        "jagi.aternos.me"
+      );
+
+    // Erst das Embed schicken
+    await message.channel.send({ embeds: [embed1] });
+
+    // Dann die ZIP-Datei schicken
+    // ACHTUNG: Pfad muss relativ zu deinem Projekt auf dem Server sein,
+    // nicht "C:/Users/...". Lege die Datei z.B. in einen Ordner ./files
+    const zipFile = new AttachmentBuilder("./foggy_field.zip");
+
+    await message.channel.send({ files: [zipFile] });
+
+    return; // nichts weiteres für diese Nachricht ausführen
+  }
+
+  // hier kommen deine anderen message-Checks (hello, how are you, zip, …)
+});
+
 
 
 // ------------------------------------------------------
