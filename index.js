@@ -129,7 +129,7 @@ Da es zurzeit sehr kalt ist, darfst du nicht vergessen, dich um deine Haut zu k√
     // Dann die ZIP-Datei schicken
     // ACHTUNG: Pfad muss relativ zu deinem Projekt auf dem Server sein,
     // nicht "C:/Users/...". Lege die Datei z.B. in einen Ordner ./files
-    const zipFile = new AttachmentBuilder("./files/foggy_field.zip");
+    const zipFile = new AttachmentBuilder("./foggy_field.zip");
 
     await message.channel.send({ files: [zipFile] });
 
