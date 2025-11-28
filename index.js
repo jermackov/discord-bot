@@ -150,10 +150,10 @@ client.on("messageCreate", async (message) => {
 
   const content = message.content.toLowerCase();
 
-  // Trigger-Wort
+  // Trigger-Wort prüfen
   if (content === "minecraft egzw") {
     const text = `Selam aleykum Jagi, ich hoffe du hast heute schön gebetet.
-Gute Arbeit bei der letzten Aufgabe, es ist sehr beeindruckend, dass du weißt, wie Gras in welchem Land aussieht!! 
+Gute Arbeit bei der letzten Aufgabe, es ist sehr beeindruckend, dass du weißt wie Gras in welchem Land aussieht!! 
 Als Belohnung möchte ich dir diese Kekse schenken. Vielleicht kannst du ja ein paar Enten damit füttern :)`;
 
     // normale Antwort
@@ -166,16 +166,18 @@ Als Belohnung möchte ich dir diese Kekse schenken. Vielleicht kannst du ja ein 
       .setDescription(
         "Du bist gefangen in einem Raum. Dein Ziel ist es herauszukommen " +
         "und herauszufinden, in welcher Stadt du dich befindest.\n\n" +
-        "IP: **jagi.aternos.me**"
+        'IP: **"jagi.aternos.me"**'
       );
 
     // Embed senden
     await message.channel.send({ embeds: [embed1] });
 
-    return; // danach nichts mehr für diese Nachricht ausführen
+    // danach nichts mehr für diese Nachricht ausführen
+    return;
   }
 
-  // HIER kommen deine anderen message-Checks (hello, zip, …)
+  // HIER können danach deine anderen message-Checks stehen
+  // z.B. if (content === "hello") { ... }
 });
 
 
