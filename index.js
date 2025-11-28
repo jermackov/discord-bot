@@ -106,30 +106,32 @@ client.on("messageCreate", async (message) => {
     content === "handcreme weihnachtszeit" ||
     content === "vaseline weihnachtszeit"
   ) {
-    const text = `Guten Morgen Jagi, ich hoffe du hast schön geträumt *quak*
-    
-    Da es zu zeit sehr kalt ist, darfst du nicht vergessen dich um deine Haut zu kümmern! Vor allem; deine Lippen müssen weich bleiben damit Nuna nicht verletzt wird beim küssen.  `;
+    const text = `Guten Morgen Jagi, ich hoffe du hast schön geträumt *quak* 😊
 
+Da es zurzeit sehr kalt ist, darfst du nicht vergessen, dich um deine Haut zu kümmern! Vor allem deine Lippen müssen weich bleiben, damit Nuna nicht verletzt wird beim Küssen.`;
+
+    // normale Antwort
     await message.reply(text);
 
+    // Embed bauen
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
       .setTitle("Tag 3: Geoguessr extreme")
-      .setDescription("Mir wurde erzählt, dass letztes Jahr im Adventskalender die GeoGuessr-Aufgabe zu leicht für dich war. Deswegen dieses Mal bisschen schwerer hehe Dieses Foto wurde an einem Flughafen geschossen. Jeder Flughafen auf der Welt hat ein sogenannten ICAO-Code. Dein Ziel ist es den Code von diesem Flughafen herauszufinden :) ");
+      .setDescription(
+        "Mir wurde erzählt, dass letztes Jahr im Adventskalender die GeoGuessr-Aufgabe zu leicht für dich war. Deswegen dieses Mal ein bisschen schwerer hehe. " +
+        "Dieses Foto wurde an einem Flughafen geschossen. Jeder Flughafen auf der Welt hat einen sogenannten ICAO-Code. " +
+        "Dein Ziel ist es, den Code von diesem Flughafen herauszufinden. 🙂"
+      );
 
-    
+    // Erst das Embed schicken
+    await message.channel.send({ embeds: [embed1] });
 
-    await message.channel.send({ embeds: [embed1] 
-                               
-// Datei laden (dein ZIP)
-      
-const zipFile = new AttachmentBuilder("C:/Users/jerma/Documents/Ideas/foggy_field.zip");
+    // Dann die ZIP-Datei schicken
+    // ACHTUNG: Pfad muss relativ zu deinem Projekt auf dem Server sein,
+    // nicht "C:/Users/...". Lege die Datei z.B. in einen Ordner ./files
+    const zipFile = new AttachmentBuilder("./files/foggy_field.zip");
 
-await message.channel.send({
-  embeds: [embed1],
-  files: [zipFile]
-
-});
+    await message.channel.send({ files: [zipFile] });
 
     return; // nichts weiteres für diese Nachricht ausführen
   }
