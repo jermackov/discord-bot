@@ -145,15 +145,16 @@ Da es zurzeit sehr kalt ist, darfst du nicht vergessen, dich um deine Haut zu k�
 // ------------------------------------------------------
 
 client.on("messageCreate", async (message) => {
-  if (message.author.bot) return; // Bots ignorieren
+  // Bots ignorieren
+  if (message.author.bot) return;
 
   const content = message.content.toLowerCase();
 
-  if (
-    content === "minecraft EGZV"
-  ) {
-    const text = `Selam aleykum Jagi, ich hoffe du hast heute schon gebetet.
-Gute Arbeit bei der letzten Aufgabe, es ist sehr beeindrucken, dass du weißt wie Gras in welchem Land aussieht!! Als Belohnung möchte ich dir diese Kekse schenken. Vielleicht kannst du ja paar enten damit füttern :) `;
+  // Trigger-Wort
+  if (content === "minecraft egzw") {
+    const text = `Selam aleykum Jagi, ich hoffe du hast heute schön gebetet.
+Gute Arbeit bei der letzten Aufgabe, es ist sehr beeindruckend, dass du weißt, wie Gras in welchem Land aussieht!! 
+Als Belohnung möchte ich dir diese Kekse schenken. Vielleicht kannst du ja ein paar Enten damit füttern :)`;
 
     // normale Antwort
     await message.reply(text);
@@ -161,26 +162,20 @@ Gute Arbeit bei der letzten Aufgabe, es ist sehr beeindrucken, dass du weißt wi
     // Embed bauen
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
-      .setTitle("Tag 4: Escape room")
+      .setTitle("Tag 4: Escape Room")
       .setDescription(
-        "Du bist gefangen in einem Raum. Dein Ziel ist es herauszukommen und herauszufinden in welcher Stadt du dich befindest.\n \n " +
-        "jagi.aternos.me"
+        "Du bist gefangen in einem Raum. Dein Ziel ist es herauszukommen " +
+        "und herauszufinden, in welcher Stadt du dich befindest.\n\n" +
+        "IP: **jagi.aternos.me**"
       );
 
-    // Erst das Embed schicken
+    // Embed senden
     await message.channel.send({ embeds: [embed1] });
 
-    // Dann die ZIP-Datei schicken
-    // ACHTUNG: Pfad muss relativ zu deinem Projekt auf dem Server sein,
-    // nicht "C:/Users/...". Lege die Datei z.B. in einen Ordner ./files
-    const zipFile = new AttachmentBuilder("./foggy_field.zip");
-
-    await message.channel.send({ files: [zipFile] });
-
-    return; // nichts weiteres für diese Nachricht ausführen
+    return; // danach nichts mehr für diese Nachricht ausführen
   }
 
-  // hier kommen deine anderen message-Checks (hello, how are you, zip, …)
+  // HIER kommen deine anderen message-Checks (hello, zip, …)
 });
 
 
