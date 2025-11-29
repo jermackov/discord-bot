@@ -224,7 +224,7 @@ Auf jeden Fall genieß das Shortbread und falls was übrig bleibt kannst du ja U
 
     return; // nichts weiteres für diese Nachricht ausführen
   }
-  const zipFile = new AttachmentBuilder(".test");
+  const zipFile = new AttachmentBuilder("./Jagi_Guessr.pdf");
 
     await message.channel.send({ files: [zipFile] });
 
