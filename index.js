@@ -248,7 +248,7 @@ Vielleicht ist dir auch aufgefallen, dass die Weihnachtsmütze ein bisschen zu g
       .setTitle("Tag 6: Poseidons Rutsche")
       .setDescription(
         "Jetzt wo du aus dem Raum entkommen bist, musst du weiter reisen. " +
-        "Poseidon hat für dich eine Rutsche aus Eis gebaut, der du folgen musst. An dem Ziel wirst du ein Freund von ihm Finden.\n\n" +
+        "Poseidon hat für dich mit seinen Fähigkeiten als Gott eine Rutsche aus Eis im Himmel gebaut, der du folgen musst. An dem Ziel wirst du ein Freund von ihm Finden.\n\n" +
         "Wer ist dieser Freund?"
       );
 
