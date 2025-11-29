@@ -220,13 +220,7 @@ Auf jeden Fall genieß das Shortbread und falls was übrig bleibt kannst du ja U
     // Erst das Embed schicken
     await message.channel.send({ embeds: [embed1] });
 
-    // Dann die ZIP-Datei schicken
-    // Pfad relativ zum Projektordner
-    const zipFile = new AttachmentBuilder("./foggy_field.zip");
-    await message.channel.send({ files: [zipFile] });
-
-    return; // für diese Nachricht fertig
-  }
+    
 
   // -----------------------------
   // 2) Anderer Trigger: PDF schicken (Trigger kannst du ändern)
