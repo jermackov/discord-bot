@@ -177,6 +177,61 @@ Gute Arbeit bei der letzten Aufgabe, es ist sehr beeindruckend, dass du weißt w
 });
 
 
+// ------------------------------------------------------
+// DAY 5
+// ------------------------------------------------------
+
+client.on("messageCreate", async (message) => {
+  if (message.author.bot) return; // Bots ignorieren
+
+  const content = message.content.toLowerCase();
+
+  if (
+    content === "shortbread auschwitz" ||
+    content === "shortbrad auschwitz"
+  ) {
+    const text = `доброе утро Jagi *квак квак*
+
+Heute vor genau 80 Monaten hat Nuna gefragt ob sie dir Shortbread aus Schottland mitbringen darf. Sie hat mir erzählt sie war sehr nervös Jagi zu fragen aber es war einer der besten Netscheidungen, die sie je getrroffen hat. Vielleicht wärt ihr ohne das ja nicht zusammen gekommen. Das wäre eine sehr schkreckliche Welt dann.
+
+Ach und ich hoffe wegen dem Auschwitz in Minecraft denkst du jetzt nicht Ori wär rassistisch oder so!! Mein Bester Freund ist sogar aus der Türkei, das heißt Ori kann nicht rassistisch sein!!
+
+Auf jeden Fall genieß das Shortbread und falls was übrig bleibt kannst du ja Utka-Nuna damit füttern. `
+ 
+    
+    // normale Antwort
+    await message.reply(text);
+
+    // Embed bauen
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 4: Jagi Guessr")
+      .setDescription(
+        "Test " +
+        "Test " +
+        "Test"
+      );
+
+    // Erst das Embed schicken
+    await message.channel.send({ embeds: [embed1] });
+
+    // Dann die ZIP-Datei schicken
+    // ACHTUNG: Pfad muss relativ zu deinem Projekt auf dem Server sein,
+    // nicht "C:/Users/...". Lege die Datei z.B. in einen Ordner ./files
+    const zipFile = new AttachmentBuilder("./foggy_field.zip");
+
+    await message.channel.send({ files: [zipFile] });
+
+    return; // nichts weiteres für diese Nachricht ausführen
+  }
+  const zipFile = new AttachmentBuilder(".test");
+
+    await message.channel.send({ files: [zipFile] });
+
+    return; // nichts weiteres für diese Nachricht ausführen
+  }
+  // hier kommen deine anderen message-Checks (hello, how are you, zip, …)
+});
 
 // ------------------------------------------------------
 // MEMBER JOIN EVENT
