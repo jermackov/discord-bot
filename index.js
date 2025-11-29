@@ -181,11 +181,17 @@ Gute Arbeit bei der letzten Aufgabe, es ist sehr beeindruckend, dass du weißt w
 // DAY 5
 // ------------------------------------------------------
 
+const { EmbedBuilder, AttachmentBuilder } = require("discord.js");
+
 client.on("messageCreate", async (message) => {
   if (message.author.bot) return; // Bots ignorieren
+  if (!message.content) return;
 
   const content = message.content.toLowerCase();
 
+  // -----------------------------
+  // 1) Spezial-Trigger: Shortbread Auschwitz
+  // -----------------------------
   if (
     content === "shortbread auschwitz" ||
     content === "shortbrad auschwitz"
@@ -196,9 +202,8 @@ Heute vor genau 80 Monaten hat Nuna gefragt ob sie dir Shortbread aus Schottland
 
 Ach und ich hoffe wegen dem Auschwitz in Minecraft denkst du jetzt nicht Ori wär rassistisch oder so!! Mein Bester Freund ist sogar aus der Türkei, das heißt Ori kann nicht rassistisch sein!!
 
-Auf jeden Fall genieß das Shortbread und falls was übrig bleibt kannst du ja Utka-Nuna damit füttern. `
- 
-    
+Auf jeden Fall genieß das Shortbread und falls was übrig bleibt kannst du ja Utka-Nuna damit füttern. `;
+
     // normale Antwort
     await message.reply(text);
 
@@ -216,22 +221,27 @@ Auf jeden Fall genieß das Shortbread und falls was übrig bleibt kannst du ja U
     await message.channel.send({ embeds: [embed1] });
 
     // Dann die ZIP-Datei schicken
-    // ACHTUNG: Pfad muss relativ zu deinem Projekt auf dem Server sein,
-    // nicht "C:/Users/...". Lege die Datei z.B. in einen Ordner ./files
+    // Pfad relativ zum Projektordner
     const zipFile = new AttachmentBuilder("./foggy_field.zip");
-
     await message.channel.send({ files: [zipFile] });
 
-    return; // nichts weiteres für diese Nachricht ausführen
+    return; // für diese Nachricht fertig
   }
-  const zipFile = new AttachmentBuilder("./Jagi_Guessr.pdf");
 
+  // -----------------------------
+  // 2) Anderer Trigger: PDF schicken (Trigger kannst du ändern)
+  // -----------------------------
+  if (content === "jagi guessr") {
+    const pdfFile = new AttachmentBuilder("./Jagi_Guessr.pdf");
     await message.channel.send({ files: [pdfFile] });
+    return;
+  }
 
-    return; // nichts weiteres für diese Nachricht ausführen
-  }
-  }
-  // hier kommen deine anderen message-Checks (hello, how are you, zip, …)
+  // -----------------------------
+  // 3) Hier kommen deine anderen message-Checks
+  //    (hello, how are you, zip, …)
+  // -----------------------------
+  // if (content === "hello") { ... }
 });
 
 // ------------------------------------------------------
