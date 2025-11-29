@@ -273,7 +273,7 @@ client.on("messageCreate", async (message) => {
  if (content === "tape schildkröte") {
     const text = `Hallo Jagi, ich hoffe du konntest heute schön ausschlafen.
 
-    Hoffentlich haben Nuna und du sich die Jahreskarte fürs Bouldern geholt, weil Nuna macht es sehr viel Spaß mit dir zusammen zu gehen. Aber es wird bestimmt auch Tage geben, wo ihr nicht zusammen gehen könnt und du auch mal alleine gehen musst. Damit deine Zehen und Finger nicht zu sehr leiden, möchte ich dir dieses Tape geben. Und wenn es deinen Händen mal nicht so gut geht, kannst du diese Maske für deine Hände benutzen🥰
+Hoffentlich haben Nuna und du sich die Jahreskarte fürs Bouldern geholt, weil Nuna macht es sehr viel Spaß mit dir zusammen zu gehen. Aber es wird bestimmt auch Tage geben, wo ihr nicht zusammen gehen könnt und du auch mal alleine gehen musst. Damit deine Zehen und Finger nicht zu sehr leiden, möchte ich dir dieses Tape geben. Und wenn es deinen Händen mal nicht so gut geht, kannst du diese Maske für deine Hände benutzen🥰
 
     Pass auf dich auf und verletz dich nicht beim Bouldern!`;
 
