@@ -261,6 +261,44 @@ Vielleicht ist dir auch aufgefallen, dass die Weihnachtsmütze ein bisschen zu g
 });
 
 // ------------------------------------------------------
+// DAY 7
+// ------------------------------------------------------
+
+client.on("messageCreate", async (message) => {
+  // Bots ignorieren
+  if (message.author.bot) return;
+
+  const content = message.content.toLowerCase();
+
+ if (content === "tape schildkröte") {
+    const text = `Hallo Jagi, ich hoffe du konntest heute schön ausschlafen.
+
+    Hoffentlich haben Nuna und du sich die Jahreskarte fürs Bouldern geholt, weil Nuna macht es sehr viel Spaß mit dir zusammen zu gehen. Aber es wird bestimmt auch Tage geben, wo ihr nicht zusammen gehen könnt und du auch mal alleine gehen musst. Damit deine Zehen und Finger nicht zu sehr leiden, möchte ich dir dieses Tape geben. Und wenn es deinen Händen mal nicht so gut geht, kannst du diese Maske für deine Hände benutzen🥰
+
+    Pass auf dich auf und verletz dich nicht beim Bouldern!`;
+
+    // normale Antwort
+    await message.reply(text);
+
+    // Embed bauen
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 7: Die Mr.Hase Magie Show")
+      .setDescription(
+        "Findest du nicht auch Magie Shows beeindruckend?" +
+        "Du kannst dir eine gratis anschauen, im Dampf sogar.\n\n" +
+        "Mit welchem Gegenstand wird der Hase im zehten Akt abgestochen?"
+      );
+
+    // Embed senden
+    await message.channel.send({ embeds: [embed1] });
+
+    // nichts anderes mehr für diese Nachricht ausführen
+    return;
+  }
+});
+
+// ------------------------------------------------------
 // MEMBER JOIN EVENT
 // ------------------------------------------------------
 
