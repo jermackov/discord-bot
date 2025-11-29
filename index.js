@@ -248,7 +248,7 @@ Vielleicht ist dir auch aufgefallen, dass die Weihnachtsmütze ein bisschen zu g
       .setTitle("Tag 6: Poseidons Rutsche")
       .setDescription(
         "Jetzt wo du aus dem Raum entkommen bist, musst du weiter reisen. " +
-        "Poseidon hat für dich mit seinen Fähigkeiten als Gott eine Rutsche aus Eis im Himmel gebaut, der du folgen musst. An dem Ziel wirst du ein Freund von ihm Finden.\n\n" +
+        "Poseidon hat für dich mit seinen Fähigkeiten als Gott eine Rutsche aus Eis im Himmel gebaut, der du folgen musst. An dem Ziel wirst du einen Freund von ihm Finden.\n\n" +
         "Wer ist dieser Freund?"
       );
 
@@ -286,8 +286,8 @@ client.on("guildMemberAdd", async (member) => {
     .setColor(0x00ff7f)
     .setTitle("Tag 1: Jeder Weg hat seinen Anfang")
     .setDescription(
-      `Heute vor 11 Monaten hat sich euer Leben stark verändert...\n\n` +
-      `Deine Aufgabe heute ist, auf tetr.io zu gehen...`
+      `Heute vor 11 Monaten hat sich euer Leben stark verändert. Ihr habt euch zusammen das Feuerwerk amgeschaut nachdem ihr zum ersten Mal Pilze probiert habt und dadurch unvergessliche Erinnerungen entstanden sind. Heute von 7 Monaten habt ihr euch spontan dazu entschieden Tee zu probieren, wobei das legendäre Tetris-Video entdeckt wurde, was nicht nur visuell aber auch skill-technisch und musikalisch ein Meisterwerk ist. Doch was bringt es nur zuzuschauen wenn man nicht selber spielt?  \n\n` +
+      `Deine Aufgabe heute ist, auf tetr.io zu gehen. In den wie viel TOP % weltweit ist man, wenn man bei dem Blitz-Modus 15000 Punkte erreicht?`
     );
 
   await welcomeChannel.send({ embeds: [embed1] });
