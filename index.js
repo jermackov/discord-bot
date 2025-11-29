@@ -181,8 +181,6 @@ Gute Arbeit bei der letzten Aufgabe, es ist sehr beeindruckend, dass du weißt w
 // DAY 5
 // ------------------------------------------------------
 
-const { EmbedBuilder, AttachmentBuilder } = require("discord.js");
-
 client.on("messageCreate", async (message) => {
   if (message.author.bot) return; // Bots ignorieren
   if (!message.content) return;
@@ -211,19 +209,17 @@ Auf jeden Fall genieß das Shortbread und falls was übrig bleibt kannst du ja U
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
       .setTitle("Tag 4: Jagi Guessr")
-      .setDescription(
-        "Test " +
-        "Test " +
-        "Test"
-      );
+      .setDescription("Test Test Test");
 
-    // Erst das Embed schicken
+    // Embed schicken
     await message.channel.send({ embeds: [embed1] });
 
-    
+    return; // für diese Nachricht fertig
+  }
 
   // -----------------------------
-  // 2) Anderer Trigger: PDF schicken (Trigger kannst du ändern)
+  // 2) Optional: PDF schicken (kein ZIP)
+  //    Trigger kannst du anpassen
   // -----------------------------
   if (content === "jagi guessr") {
     const pdfFile = new AttachmentBuilder("./Jagi_Guessr.pdf");
@@ -232,11 +228,11 @@ Auf jeden Fall genieß das Shortbread und falls was übrig bleibt kannst du ja U
   }
 
   // -----------------------------
-  // 3) Hier kommen deine anderen message-Checks
-  //    (hello, how are you, zip, …)
+  // 3) Weitere message-Checks
   // -----------------------------
   // if (content === "hello") { ... }
 });
+
 
 // ------------------------------------------------------
 // MEMBER JOIN EVENT
