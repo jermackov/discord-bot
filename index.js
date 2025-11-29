@@ -204,7 +204,7 @@ Auf jeden Fall genieß das Shortbread und falls was übrig bleibt kannst du ja U
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
       .setTitle("Tag 4: Jagi Guessr")
-      .setDescription("Test Test Test");
+      .setDescription("Deine heutige Aufgabe ist eine Runde Jagi-Guessr. Ich habe Bilder von dir (die sehr süß sind, wie kann man so gut aussehen?) zusammengestellt und du musst erraten in welcher Stadt diese aufgenommen wurden. ");
 
     await message.channel.send({ embeds: [embed1] });
 
