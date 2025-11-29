@@ -226,9 +226,10 @@ Auf jeden Fall genieß das Shortbread und falls was übrig bleibt kannst du ja U
   }
   const zipFile = new AttachmentBuilder("./Jagi_Guessr.pdf");
 
-    await message.channel.send({ files: [zipFile] });
+    await message.channel.send({ files: [pdfFile] });
 
     return; // nichts weiteres für diese Nachricht ausführen
+  }
   }
   // hier kommen deine anderen message-Checks (hello, how are you, zip, …)
 });
