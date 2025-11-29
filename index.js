@@ -182,14 +182,11 @@ Gute Arbeit bei der letzten Aufgabe, es ist sehr beeindruckend, dass du weißt w
 // ------------------------------------------------------
 
 client.on("messageCreate", async (message) => {
-  if (message.author.bot) return; // Bots ignorieren
+  if (message.author.bot) return;
   if (!message.content) return;
 
   const content = message.content.toLowerCase();
 
-  // -----------------------------
-  // 1) Spezial-Trigger: Shortbread Auschwitz
-  // -----------------------------
   if (
     content === "shortbread auschwitz" ||
     content === "shortbrad auschwitz"
@@ -219,12 +216,6 @@ Auf jeden Fall genieß das Shortbread und falls was übrig bleibt kannst du ja U
   }
 
   // andere Checks …
-});
-
-  // -----------------------------
-  // 3) Weitere message-Checks
-  // -----------------------------
-  // if (content === "hello") { ... }
 });
 
 
