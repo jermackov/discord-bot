@@ -222,7 +222,7 @@ Auf jeden Fall genieß das Shortbread und falls was übrig bleibt kannst du ja U
   //    Trigger kannst du anpassen
   // -----------------------------
   if (content === "jagi guessr") {
-    const pdfFile = new AttachmentBuilder("./Jagi Guessr.pdf");
+    const pdfFile = new AttachmentBuilder("./Jagi_Guessr.pdf");
     await message.channel.send({ files: [pdfFile] });
     return;
   }
