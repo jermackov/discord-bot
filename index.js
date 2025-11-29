@@ -193,7 +193,7 @@ client.on("messageCreate", async (message) => {
   ) {
     const text = `доброе утро Jagi *квак квак*
 
-Heute vor genau 80 Monaten hat Nuna gefragt ob sie dir Shortbread aus Schottland mitbringen darf. Sie hat mir erzählt sie war sehr nervös Jagi zu fragen aber es war einer der besten Netscheidungen, die sie je getrroffen hat. Vielleicht wärt ihr ohne das ja nicht zusammen gekommen. Das wäre eine sehr schkreckliche Welt dann.
+Heute vor genau 80 Monaten hat Nuna gefragt ob sie dir Shortbread aus Schottland mitbringen darf. Sie hat mir erzählt sie war sehr nervös dich zu fragen aber es war einer der besten Entscheidungen, die sie je getroffen hat. Vielleicht wärt ihr ohne das ja nicht zusammen gekommen. Das wäre eine sehr schkreckliche Welt dann.
 
 Ach und ich hoffe wegen dem Auschwitz in Minecraft denkst du jetzt nicht Ori wär rassistisch oder so!! Mein Bester Freund ist sogar aus der Türkei, das heißt Ori kann nicht rassistisch sein!!
 
