@@ -218,6 +218,43 @@ Auf jeden Fall genieß das Shortbread und falls was übrig bleibt kannst du ja U
   // andere Checks …
 });
 
+// ------------------------------------------------------
+// DAY 6
+// ------------------------------------------------------
+
+client.on("messageCreate", async (message) => {
+  // Bots ignorieren
+  if (message.author.bot) return;
+
+  const content = message.content.toLowerCase();
+
+ if (content === "ente stromkabel") {
+    const text = `GuMo Jagi. Hoffentlich hattest du einen schönen Start in den Tag.
+
+Frohen Nikolaus-Tag!!🎉🎉 Als Geschenk möchte ich dir diese Ente geben. Und es ist auch nicht irgendeine Ente. Tatsächlich bin ich Mutter geworden!!! diese Ente ist mein Sohn und heißt Poseidon! Er heißt so, weil er wurde als Gott des Meeres geboren wurde, aber ich erzäle dir mehr in der Aufgabe.
+
+Vielleicht ist dir aufgefallen, dass die Weihnachtsmütze ein bisschen zu groß für Poseidon ist. Das liegt daran, dass es nicht seine ist. Nuna hat sie mir mitgegeben und hat gesagt du sollst sie an Utcar übergeben, weil es ihr wichtig ist, dass während du fährst weiterhin in Weihnachtsstimmung bleiben sollst und damit Utcars Kopf bei der Kälte nicht einfriert!`;
+
+    // normale Antwort
+    await message.reply(text);
+
+    // Embed bauen
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 6: Poseidons Rutsche")
+      .setDescription(
+        "Jetzt wo du aus dem Raum entkommen bist, musst du weiter reisen. " +
+        "Poseidon hat für dich eine Rutsche aus Eis gebaut, der du folgen musst. An dem Ziel wirst du ein Freund von ihm Finden.\n\n" +
+        "Wer ist dieser Freund?"
+      );
+
+    // Embed senden
+    await message.channel.send({ embeds: [embed1] });
+
+    // nichts anderes mehr für diese Nachricht ausführen
+    return;
+  }
+});
 
 // ------------------------------------------------------
 // MEMBER JOIN EVENT
@@ -235,10 +272,10 @@ client.on("guildMemberAdd", async (member) => {
     `Jagiii!!! Ich freu mich, dass du endlich hier bist!\n` +
     `Ich bin **${member.guild.name}** und ich werde dich über die Weihnachtszeit begleiten🦆\n` +
     `Nuna hat mir erzählt, dass sie gerne etwas schönes für deinen Adventskalender machen möchte und hat mich deswegen gefragt...\n` +
-    `Ich habe eigentlich nur Enten als Freunde aber von dem was Nuna mir über dich erzählt hört es sich so an als wärst du echt süß, weshalb ich denke, dass wir uns echt gut verstehen werden _quak quak_\n\n` +
+    `Eigentlich habe ich nur Enten als Freunde aber von dem was Nuna mir über dich erzählt hört es sich so an als wärst du echt süß, weshalb ich denke, dass wir uns echt gut verstehen werden _quak quak_\n\n` +
     `Ich habe für dich für jeden Tag ein kleines Rätsel vorbereitet. Du musst dir also dein Weihnachtsgeschenk hart erarbeiten _hahahaha quak hahaha_ \n` +
     `Das funktioniert, indem du den Gegenstand aus dem Adventskalender zusammen mit der Lösung vom Rätsel des vorherigen Tages zusammen hier in den Chat schreibst.\n` +
-    `Als Beispiel: Wenn du aus deinem Adventskalender heute ein Butt-Plug bekommst und die Lösung vom Rätsel "Schokolade" ist, schreibst du in diesen Chat "Buttplug Schokolade".`
+    `Als Beispiel: Wenn du aus deinem Adventskalender heute ein Butt-Plug bekommst und die Lösung vom Rätsel "Schokolade" ist, schreibst du in diesen Chat "Buttplug Schokolade". So kann ich sicher gehen dass du für jeden Tag etwas zu tun hast und nicht alles an einem Tag machst. Falls du wenig Zeit hast ist das auch in Ordnung, du kannst alles so spät machen wie du willst. Also kein Stress und hab Spaß!`
   );
 
   const embed1 = new EmbedBuilder()
