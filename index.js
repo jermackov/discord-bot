@@ -233,6 +233,8 @@ client.on("messageCreate", async (message) => {
 
 Frohen Nikolaus-Tag!!🎉🎉 Als Geschenk möchte ich dir diese Ente geben. Und es ist auch nicht irgendeine Ente. Tatsächlich bin ich Mutter geworden!!! diese Ente ist mein Sohn und heißt Poseidon! Er heißt so, weil er wurde als Gott des Meeres geboren wurde, aber ich erzäle dir mehr in der Aufgabe.
 
+Du fragst dich vielleicht, warum "Stromkabel"? Weil du bist Nunas Stromkabel. Du gibst ihr ganz viel Energie und ohne dich wäre es sehr schwer zu leuchten *quak quak*
+
 Vielleicht ist dir aufgefallen, dass die Weihnachtsmütze ein bisschen zu groß für Poseidon ist. Das liegt daran, dass es nicht seine ist. Nuna hat sie mir mitgegeben und hat gesagt du sollst sie an Utcar übergeben, weil es ihr wichtig ist, dass während du fährst weiterhin in Weihnachtsstimmung bleiben sollst und damit Utcars Kopf bei der Kälte nicht einfriert!`;
 
     // normale Antwort
