@@ -202,30 +202,24 @@ Ach und ich hoffe wegen dem Auschwitz in Minecraft denkst du jetzt nicht Ori wä
 
 Auf jeden Fall genieß das Shortbread und falls was übrig bleibt kannst du ja Utka-Nuna damit füttern. `;
 
-    // normale Antwort
     await message.reply(text);
 
-    // Embed bauen
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
       .setTitle("Tag 4: Jagi Guessr")
       .setDescription("Test Test Test");
 
-    // Embed schicken
     await message.channel.send({ embeds: [embed1] });
 
-    return; // für diese Nachricht fertig
-  }
-
-  // -----------------------------
-  // 2) Optional: PDF schicken (kein ZIP)
-  //    Trigger kannst du anpassen
-  // -----------------------------
-  if (content === "jagi guessr") {
+    // HIER: PDF senden (ohne ZIP)
     const pdfFile = new AttachmentBuilder("./Jagi_Guessr.pdf");
     await message.channel.send({ files: [pdfFile] });
-    return;
+
+    return; // fertig
   }
+
+  // andere Checks …
+});
 
   // -----------------------------
   // 3) Weitere message-Checks
