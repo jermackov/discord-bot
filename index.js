@@ -248,7 +248,7 @@ Vielleicht ist dir auch aufgefallen, dass die Weihnachtsmütze ein bisschen zu g
       .setTitle("Tag 6: Poseidons Rutsche")
       .setDescription(
         "Jetzt wo du aus dem Raum entkommen bist, musst du weiter reisen. " +
-        "Poseidon hat für dich mit seinen Fähigkeiten als Gott eine Rutsche aus Eis im Himmel gebaut, der du folgen musst. An dem Ziel wirst du einen Freund von ihm Finden.\n\n" +
+        "Poseidon hat für dich mit seinen Fähigkeiten als Gott eine Rutsche aus Eis im Himmel gebaut, der du folgen musst. Am Ziel wirst du einen Freund von ihm Finden.\n\n" +
         "Wer ist dieser Freund?"
       );
 
@@ -273,7 +273,7 @@ client.on("messageCreate", async (message) => {
  if (content === "tape schildkröte") {
     const text = `Hallo Jagi, ich hoffe du konntest heute schön ausschlafen.
 
-Hoffentlich haben Nuna und du sich die Jahreskarte fürs Bouldern geholt, weil Nuna macht es sehr viel Spaß mit dir zusammen zu gehen. Aber es wird bestimmt auch Tage geben, wo ihr nicht zusammen gehen könnt und du auch mal alleine gehen musst. Damit deine Zehen und Finger nicht zu sehr leiden, möchte ich dir dieses Tape geben. Und wenn es deinen Händen mal nicht so gut geht, kannst du diese Maske für deine Hände benutzen🥰
+    Hoffentlich haben Nuna und du sich die Jahreskarte fürs Bouldern geholt, weil Nuna macht es sehr viel Spaß mit dir zusammen zu gehen. Aber es wird bestimmt auch Tage geben, wo ihr nicht zusammen gehen könnt und du auch mal alleine gehen musst. Damit deine Zehen und Finger nicht zu sehr leiden, möchte ich dir dieses Tape geben. Und wenn es deinen Händen mal nicht so gut geht, kannst du diese Maske für deine Hände benutzen🥰
 
     Pass auf dich auf und verletz dich nicht beim Bouldern!`;
 
@@ -298,6 +298,46 @@ Hoffentlich haben Nuna und du sich die Jahreskarte fürs Bouldern geholt, weil N
   }
 });
 
+
+// ------------------------------------------------------
+// DAY 8
+// ------------------------------------------------------
+
+client.on("messageCreate", async (message) => {
+  // Bots ignorieren
+  if (message.author.bot) return;
+
+  const content = message.content.toLowerCase();
+
+ if (content === "seelenwärmer schwert") {
+    const text = `안녕 자기, 잘잤엉? ㅎㅎ
+
+    Ich hoffe die Mr. Rabbit Magic Show hat dir gefallen. Wenn ja kannst du ja mit Nuna zusammen das Spiel weiterspielen damit ihr zusammen die Rätsel weiter lösen könnt.
+
+    Als heutiges Geschenk gibt's einen Seelenwärmer. Das ist ein Pudding, und perfekt wenn du an einem kalten Tag ein warmes, süßes Dessert willst! (obwohl du schon das Maximum von süß sein erreicht hast)
+
+    Bleib warm und hab einen schönen Start in die Woche🥰`;
+
+    // normale Antwort
+    await message.reply(text);
+
+    // Embed bauen
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 8: Grüne Hände")
+      .setDescription(
+        "Du siehst sie fast täglich, aber nur von außen. Die Frau die Beutelwölfe und Falken kontrolliert." +
+        "Du musst in sie hineingehen und ihre Hände betrachten. Dort finest du einen Code.\n\n" +
+        "Wie endet dieser Code? 161211 _ _ _"
+      );
+
+    // Embed senden
+    await message.channel.send({ embeds: [embed1] });
+
+    // nichts anderes mehr für diese Nachricht ausführen
+    return;
+  }
+});
 // ------------------------------------------------------
 // MEMBER JOIN EVENT
 // ------------------------------------------------------
