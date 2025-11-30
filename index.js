@@ -338,6 +338,45 @@ Bleib warm und hab einen schönen Start in die Woche🥰`;
     return;
   }
 });
+
+// ------------------------------------------------------
+// DAY 9
+// ------------------------------------------------------
+
+client.on("messageCreate", async (message) => {
+  // Bots ignorieren
+  if (message.author.bot) return;
+
+  const content = message.content.toLowerCase();
+
+ if (content === "soba 420") {
+    const text = `*hust hust* Guten Morgen *hust* Jagi.
+
+Ich habe mich wohl nicht *hust* richtig angezogen *hust* Und das bei dieser Kälte *hust hust*. 
+
+Ich denke *hust* ich mach mir jetzt ein Tee und gönn mir einen Jonny *hust hust*`;
+
+    // normale Antwort
+    await message.reply(text);
+
+    // Embed bauen
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 9: Hust hust")
+      .setDescription(
+        "Ich *hust* schaff das heute nicht *hust* Heute muss mein Bester Freund für mich übernehmen *hust* Du musst ihm schreiben auf I... *HUST HUST HUST HUST*" 
+
+      );
+
+    // Embed senden
+    await message.channel.send({ embeds: [embed1] });
+
+    // nichts anderes mehr für diese Nachricht ausführen
+    return;
+  }
+});
+
+
 // ------------------------------------------------------
 // MEMBER JOIN EVENT
 // ------------------------------------------------------
