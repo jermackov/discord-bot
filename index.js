@@ -273,9 +273,9 @@ client.on("messageCreate", async (message) => {
  if (content === "tape schildkröte") {
     const text = `Hallo Jagi, ich hoffe du konntest heute schön ausschlafen.
 
-  Hoffentlich haben Nuna und du sich die Jahreskarte fürs Bouldern geholt, weil Nuna macht es sehr viel Spaß mit dir zusammen zu gehen. Aber es wird bestimmt auch Tage geben, wo ihr nicht zusammen gehen könnt und du auch mal alleine gehen musst. Damit deine Zehen und Finger nicht zu sehr leiden, möchte ich dir dieses Tape geben. Und wenn es deinen Händen mal nicht so gut geht, kannst du diese Maske für deine Hände benutzen🥰
+Hoffentlich haben Nuna und du sich die Jahreskarte fürs Bouldern geholt, weil Nuna macht es sehr viel Spaß mit dir zusammen zu gehen. Aber es wird bestimmt auch Tage geben, wo ihr nicht zusammen gehen könnt und du auch mal alleine gehen musst. Damit deine Zehen und Finger nicht zu sehr leiden, möchte ich dir dieses Tape geben. Und wenn es deinen Händen mal nicht so gut geht, kannst du diese Maske für deine Hände benutzen🥰
 
-    Pass auf dich auf und verletz dich nicht beim Bouldern!`;
+Pass auf dich auf und verletz dich nicht beim Bouldern!`;
 
     // normale Antwort
     await message.reply(text);
@@ -312,11 +312,11 @@ client.on("messageCreate", async (message) => {
  if (content === "seelenwärmer schwert") {
     const text = `안녕 자기, 잘잤엉? ㅎㅎ
 
-  Ich hoffe die Mr. Rabbit Magic Show hat dir gefallen. Wenn ja kannst du ja mit Nuna zusammen das Spiel weiterspielen damit ihr zusammen die Rätsel weiter lösen könnt.
+Ich hoffe die Mr. Rabbit Magic Show hat dir gefallen. Wenn ja kannst du ja mit Nuna zusammen das Spiel weiterspielen damit ihr zusammen die Rätsel weiter lösen könnt.
 
-  Als heutiges Geschenk gibt's einen Seelenwärmer. Das ist ein Pudding, und perfekt wenn du an einem kalten Tag ein warmes, süßes Dessert willst! (obwohl du schon das Maximum von süß sein erreicht hast)
+Als heutiges Geschenk gibt's einen Seelenwärmer. Das ist ein Pudding, und perfekt wenn du an einem kalten Tag ein warmes, süßes Dessert willst! (obwohl du schon das Maximum von süß sein erreicht hast)
 
-  Bleib warm und hab einen schönen Start in die Woche🥰`;
+Bleib warm und hab einen schönen Start in die Woche🥰`;
 
     // normale Antwort
     await message.reply(text);
