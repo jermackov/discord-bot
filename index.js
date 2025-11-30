@@ -350,9 +350,9 @@ client.on("messageCreate", async (message) => {
   const content = message.content.toLowerCase();
 
  if (content === "soba 420") {
-    const text = `*hust hust* Guten Morgen *hust* Jagi.
+    const text = `*hust hust* Guten Morgen *hust* Jagi
 
-Ich habe mich wohl nicht *hust* richtig angezogen *hust* Und das bei dieser Kälte *hust hust*. 
+Ich habe mich wohl nicht *hust* richtig angezogen *hust* Und das bei dieser Kälte *hust hust* 
 
 Ich denke *hust* ich mach mir jetzt ein Tee und gönn mir einen Jonny *hust hust*`;
 
@@ -364,7 +364,7 @@ Ich denke *hust* ich mach mir jetzt ein Tee und gönn mir einen Jonny *hust hust
       .setColor(0x00ff7f)
       .setTitle("Tag 9: Hust hust")
       .setDescription(
-        "Ich *hust* schaff das heute nicht *hust* Heute muss mein Bester Freund für mich übernehmen *hust* Du musst ihm schreiben auf I... *HUST HUST HUST HUST*" 
+        "Ich *hust* schaff das heute nicht *hust* Heute muss mein Bester Freund für mich übernehmen *hust* Du musst ihm schreiben auf I... *HUST HUST QUAK HUST*" 
 
       );
 
