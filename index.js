@@ -353,8 +353,8 @@ client.on("guildMemberAdd", async (member) => {
     `🎉 **_QUAK QUAK!_** 🎉\n\n` +
     `Jagiii!!! Ich freu mich, dass du endlich hier bist!\n` +
     `Ich bin **${member.guild.name}** und ich werde dich über die Weihnachtszeit begleiten🦆\n` +
-    `Nuna hat mir erzählt, dass sie gerne etwas schönes für deinen Adventskalender machen möchte und hat mich deswegen gefragt...\n` +
-    `Eigentlich habe ich nur Enten als Freunde aber von dem was Nuna mir über dich erzählt hört es sich so an als wärst du echt süß, weshalb ich denke, dass wir uns echt gut verstehen werden _quak quak_\n\n` +
+    `Utka-Nuna hat mir erzählt, dass sie gerne etwas schönes für deinen Adventskalender machen möchte und hat mich deswegen gefragt...\n` +
+    `Eigentlich habe ich nur Enten als Freunde aber von dem was Utka-Nuna mir über dich erzählt hört es sich so an als wärst du echt süß, weshalb ich denke, dass wir uns echt gut verstehen werden _quak quak_\n\n` +
     `Ich habe für dich für jeden Tag ein kleines Rätsel vorbereitet. Du musst dir also dein Weihnachtsgeschenk hart erarbeiten _hahahaha quak hahaha_ \n` +
     `Das funktioniert, indem du den Gegenstand aus dem Adventskalender zusammen mit der Lösung vom Rätsel des vorherigen Tages zusammen hier in den Chat schreibst.\n` +
     `Als Beispiel: Wenn du aus deinem Adventskalender heute ein Butt-Plug bekommst und die Lösung vom Rätsel "Schokolade" ist, schreibst du in diesen Chat "Buttplug Schokolade". So kann ich sicher gehen dass du für jeden Tag etwas zu tun hast und nicht alles an einem Tag machst. Falls du wenig Zeit hast ist das auch in Ordnung, du kannst alles so spät machen wie du willst. Also kein Stress und hab Spaß!`
