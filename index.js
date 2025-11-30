@@ -85,7 +85,7 @@ Wenn sie sich wohlfühlen, zeigen sie es dir im Frühling oder Sommer mit hübsc
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
       .setTitle("Tag 2: Dampfmaschine")
-      .setDescription("Dein wahrer Wohnort ist nicht wo du denkst, dass er ist. Du findest ihn ihm Dampf umhüllt. Du musst diesen Ort auf der Karte ohne kreise aufsuchen. Dort werde ich auf dich warten. ");
+      .setDescription("Dein wahrer Wohnort ist nicht dort, wo du denkst. Du findest ihn in Dampf umhüllt. Du musst diesen Ort auf der Karte bestehend aus Quadraten aufsuchen. Dort werde ich auf dich warten. ");
 
     await message.channel.send({ embeds: [embed1] });
 
