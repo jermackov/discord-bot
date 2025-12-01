@@ -453,26 +453,6 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
         "E1000000M10001S11011"
       );
 
-   client.on("messageCreate", async (message) => {
-  // Bots ignorieren
-  if (message.author.bot) return;
-
-  const content = message.content.toLowerCase();
-
- if (
-   content === "baroque" ){
-   
-const embed1 = new EmbedBuilder()
-    .setColor(0x00ff7f)
-      .setTitle("Tag 11: Totenkopf Jagt")
-      .setDescription(
-        "Test" +
-        "Was sagt der Text über dem Totenkopf mit Flügeln auf dem Briefkasten in einem Stück?" +
-        "Du Findest ihn hier:\n\n" +
-        "E1000000M10001S11011"
-      );
-    // Embed senden
-    await message.channel.send({ embeds: [embed1] });
 
     // nichts anderes mehr für diese Nachricht ausführen
     return;
