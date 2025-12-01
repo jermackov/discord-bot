@@ -420,6 +420,64 @@ Mir geht es zum Glück besser als gestern, und auch du musst aufpassen, dass es 
 });
 
 
+// ------------------------------------------------------
+// DAY 11
+// ------------------------------------------------------
+
+client.on("messageCreate", async (message) => {
+  // Bots ignorieren
+  if (message.author.bot) return;
+
+  const content = message.content.toLowerCase();
+
+ if (
+   content === "cashew erdnuss godsbattler" ||
+    content === "cashew erdnuss mix godsbattler"
+   ){
+    const text = `Bonjour Jagi
+
+Utka-Nuna dakt dir, dass sie mit dir dieses Jahr so viele schöne neuer Lieder entdecken konnte (obwohl die meisten davon hight entdeckt wurden). Und mit Godsbattler bist du geimeint! Weil in meinen Augen diffst du jeden möglichen Gott auf dieser Welt einfach nur indem du du bist. Bu bist mein einziger Gott *quak quak*
+Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zusammen kuscheln während ihr neue Banger in der Trippy-Playlist entdeckt🥰`;
+
+    // normale Antwort
+    await message.reply(text);
+
+    // Embed bauen
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 11: Totenkopf Jagt")
+      .setDescription(
+        "Dieses Mal sollst du die Lösung von dem Rätsel alleine inden Chat schreiben." +
+        "Was sagt der Text über dem Totenkopf mit Flügeln auf dem Briefkasten in einem Stück?" +
+        "Du Findest ihn hier:\n\n" +
+        "E1000000M10001S11011"
+      );
+
+   client.on("messageCreate", async (message) => {
+  // Bots ignorieren
+  if (message.author.bot) return;
+
+  const content = message.content.toLowerCase();
+
+ if (
+   content === "baroque" ){
+   
+const embed1 = new EmbedBuilder()
+    .setColor(0x00ff7f)
+      .setTitle("Tag 11: Totenkopf Jagt")
+      .setDescription(
+        "Test" +
+        "Was sagt der Text über dem Totenkopf mit Flügeln auf dem Briefkasten in einem Stück?" +
+        "Du Findest ihn hier:\n\n" +
+        "E1000000M10001S11011"
+      );
+    // Embed senden
+    await message.channel.send({ embeds: [embed1] });
+
+    // nichts anderes mehr für diese Nachricht ausführen
+    return;
+  }
+});
 
 // ------------------------------------------------------
 // MEMBER JOIN EVENT
