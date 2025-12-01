@@ -410,8 +410,9 @@ Mir geht es zum Glück besser als gestern, und auch du musst aufpassen, dass es 
     // Embed senden
     await message.channel.send({ embeds: [embed1] });
 
-   const pdffile = new Attachmentbuilder("./Missing_Words.pdf");
-   await message.channel.send({ files: [pdffile] })
+    const pdfFile = new AttachmentBuilder("./Missing_Words.pdf");
+    await message.channel.send({ files: [pdfFile] });
+
 
     // nichts anderes mehr für diese Nachricht ausführen
     return;
