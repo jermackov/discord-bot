@@ -391,9 +391,9 @@ client.on("messageCreate", async (message) => {
     content === "heiße schokolade allahu quakbar"
    ){
     const text = `Wunderschönen Morgen Jagi!
-Hoffentlich war Mohammutka nett zu dir! Ich kenne ihn schon sehr ewig, er ist immer für mich da wenn ich ihn brauche.
+Hoffentlich war Mohammutka nett zu dir! Ich kenne ihn schon sehr ewig, er ist immer für mich da wenn ich ihn brauche, sowi Utka-Nuna immer für dich da sein wird, wenn du sie brauchst.
 
-Mir geht es zum Glück besser als gestern, und du musst aufpassen, dass es dich nicht erwischt. Auch heute soll es kalt werden, deswegen zieh dich gut an und trink die heiße Schokolade falls dir kalt wird :)`
+Mir geht es zum Glück besser als gestern, und auch du musst aufpassen, dass es dich nicht erwischt. Auch heute soll es kalt werden, deswegen zieh dich gut an und trink die heiße Schokolade falls dir kalt wird :)`
 
     // normale Antwort
     await message.reply(text);
@@ -409,6 +409,9 @@ Mir geht es zum Glück besser als gestern, und du musst aufpassen, dass es dich 
 
     // Embed senden
     await message.channel.send({ embeds: [embed1] });
+
+   const pdffile = new Attachmentbuilder("./Missing_Words.pdf");
+   await message.channel.send({ files: [pdffile] })
 
     // nichts anderes mehr für diese Nachricht ausführen
     return;
