@@ -189,7 +189,7 @@ client.on("messageCreate", async (message) => {
 
   if (
     content === "shortbread auschwitz" ||
-    content === "shortbrad auschwitz"
+    content === "short bread auschwitz"
   ) {
     const text = `доброе утро Jagi *квак квак*
 
@@ -375,6 +375,46 @@ Ich denke *hust* ich mach mir jetzt ein Tee und gönn mir einen Jonny *hust hust
     return;
   }
 });
+
+// ------------------------------------------------------
+// DAY 10
+// ------------------------------------------------------
+
+client.on("messageCreate", async (message) => {
+  // Bots ignorieren
+  if (message.author.bot) return;
+
+  const content = message.content.toLowerCase();
+
+ if (
+   content === "hot chocolate allahu quakbar" ||
+    content === "heiße schokolade allahu quakbar"
+   ){
+    const text = `Wunderschönen Morgen Jagi!
+Hoffentlich war Mohammutka nett zu dir! Ich kenne ihn schon sehr ewig, er ist immer für mich da wenn ich ihn brauche.
+
+Mir geht es zum Glück besser als gestern, und du musst aufpassen, dass es dich nicht erwischt. Auch heute soll es kalt werden, deswegen zieh dich gut an und trink die heiße Schokolade falls dir kalt wird :)`
+
+    // normale Antwort
+    await message.reply(text);
+
+    // Embed bauen
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 10: Johann Wolfgang von Goethe")
+      .setDescription(
+        "Es ist ein Wunder, wie gut manche Menschen im Schreiben und Komponieren sind. Manche dieser Texte haben es bis zu dir und Utka-Nuna geschafft, sodass manche davon sogar vielleicht eine Bedeutung für euch haben. \n\n" +
+        "Irgendwie sind einige Wörter verloren gegangen. Schaffst du es sie wieder zu finden?"
+      );
+
+    // Embed senden
+    await message.channel.send({ embeds: [embed1] });
+
+    // nichts anderes mehr für diese Nachricht ausführen
+    return;
+  }
+});
+
 
 
 // ------------------------------------------------------
