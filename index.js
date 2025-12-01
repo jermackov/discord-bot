@@ -453,7 +453,8 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
         "E1000000M10001S11011"
       );
 
-
+  await message.channel.send({ embeds: [embed1] });
+   
     // nichts anderes mehr für diese Nachricht ausführen
     return;
   }
