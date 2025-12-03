@@ -454,50 +454,50 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
     await message.channel.send({ embeds: [embed1] });
   }
 
-// SECOND TRIGGER → separate block
-const answer = "baroque";
+ const answer = "baroque";
 
-if (content === answer) {
-  await message.reply("Richtig! 🎉");
+  if (content === answer) {
+    await message.reply("Richtig! 🎉");
 
-  const embed1 = new EmbedBuilder()
-    .setColor(0x00ff7f)
-    .setTitle("")
-    .setDescription("Dieses Logo bezieht sich auf eine Gruppe. Wie heißt das süßeste Mitglied dieser Gruppe?");
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("")
+      .setDescription("Dieses Logo bezieht sich auf eine Gruppe. Wie heißt das süßeste Mitglied dieser Gruppe?");
 
-  await message.channel.send({ embeds: [embed1] });
-}
+    await message.channel.send({ embeds: [embed1] });
+  }
 
-// ---------------------
+  // ---------------------
 
-const answer2 = "karoo";
+  const answer2 = "karoo";
 
-if (content === answer2) {
-  await message.reply("Nice! 🎉");
+  if (content === answer2) {
+    await message.reply("Nice! 🎉");
 
-  const embed2 = new EmbedBuilder()
-    .setColor(0x00ff7f)
-    .setTitle("")
-    .setDescription("Der Mann mit Zahl in den Haaren redet in seiner ersten Szene über sein Lieblingsgetränk. Wie heißt es?");
+    const embed2 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("")
+      .setDescription("Der Mann mit Zahl in den Haaren redet in seiner ersten Szene über sein Lieblingsgetränk. Wie heißt es?");
 
-  await message.channel.send({ embeds: [embed2] });
-}
+    await message.channel.send({ embeds: [embed2] });
+  }
 
-// THIRD TRIGGER
-const answer3 = "earl grey";
+  // THIRD TRIGGER
+  const answer3 = "earl grey";
 
-if (content === answer3) {
-  await message.reply("Nice! 🎉");
+  if (content === answer3) {
+    await message.reply("Nice! 🎉");
 
-  const embed3 = new EmbedBuilder()
-    .setColor(0x00ff7f)
-    .setTitle("Zusatz-Info")
-    .setDescription("Hier kommt dein Zusatz-Embed!");
+    const embed3 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Zusatz-Info")
+      .setDescription("Hier kommt dein Zusatz-Embed!");
 
-  await message.channel.send({ embeds: [embed3] });
+    await message.channel.send({ embeds: [embed3] });
 
-  return;
-}
+    return;
+  }
+
 });
 
 // ------------------------------------------------------
