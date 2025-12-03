@@ -462,17 +462,33 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
 
     const embed = new EmbedBuilder()
       .setColor(0x00ff7f)
-      .setTitle("Zusatz-Info")
-      .setDescription("Hier kommt dein Zusatz-Embed!");
+      .setTitle("")
+      .setDescription("Dieses Logo bezieht sich auf eine Gruppe. Wie heißt das süßeste Mitglied dieser Gruppe?");
 
     await message.channel.send({ embeds: [embed] });
 }
 
+// ------------------------
 
- // THIRD TRIGGER
-  const answer2 = "earl grey";
+   const answer2 = "karoo";
     
   if (content === answer2) {
+    await message.reply("Nice! 🎉");
+
+    const embed = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("")
+      .setDescription("Der Mann mit Zahl in den Haaren redet in seiner ersten Szene über sein Lieblingsgetränk. Wie heißt es?");
+
+    await message.channel.send({ embeds: [embed] });
+
+    return;
+  }
+  
+ // THIRD TRIGGER
+  const answer3 = "earl grey";
+    
+  if (content === answer3) {
     await message.reply("Nice! 🎉");
 
     const embed = new EmbedBuilder()
