@@ -445,7 +445,7 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
       .setColor(0x00ff7f)
       .setTitle("Tag 11: Totenkopf Jagd")
       .setDescription(
-        "Dieses Mal sollst du die Lösung von dem Rätsel alleine inden Chat schreiben." +
+        "Dieses Mal sollst du die Lösung von dem Rätsel alleine inden Chat schreiben. " +
         "Was sagt der Text über dem Totenkopf mit Flügeln auf dem Briefkasten in einem Stück?" +
         "Du Findest ihn hier:\n\n" +
         "E1000000M10001S11011"
@@ -487,7 +487,7 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
   const answer4 = "Nanday";
 
   if (content === answer4) {
-    await message.reply("Nice! 🎉");
+    await message.reply("Yippie! 🎉");
 
     const embed4 = new EmbedBuilder()
       .setColor(0x00ff7f)
