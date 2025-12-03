@@ -425,11 +425,11 @@ Mir geht es zum Glück besser als gestern, und auch du musst aufpassen, dass es 
 // ------------------------------------------------------
 
 client.on("messageCreate", async (message) => {
-  // Bots ignorieren
   if (message.author.bot) return;
 
   const content = message.content.toLowerCase();
 
+  // FIRST TRIGGER
   if (
     content === "cashew erdnuss godsbattler" ||
     content === "cashew erdnuss mix godsbattler"
@@ -439,10 +439,8 @@ client.on("messageCreate", async (message) => {
 Utka-Nuna dakt dir, dass sie mit dir dieses Jahr so viele schöne neuer Lieder entdecken konnte (obwohl die meisten davon hight entdeckt wurden). Und mit Godsbattler bist du geimeint! Weil in meinen Augen diffst du jeden möglichen Gott auf dieser Welt einfach nur indem du du bist. Bu bist mein einziger Gott *quak quak*
 Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zusammen kuscheln während ihr neue Banger in der Trippy-Playlist entdeckt🥰`;
 
-    // normale Antwort
     await message.reply(text);
 
-    // Embed bauen
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
       .setTitle("Tag 11: Totenkopf Jagd")
@@ -454,25 +452,23 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
       );
 
     await message.channel.send({ embeds: [embed1] });
+  }
 
-    const answer = "baroque";
+  // SECOND TRIGGER → separate block
+  const answer = "baroque";
 
-    if (message.content.toLowerCase() === answer) {
-      // 1. Normale Antwort
-      await message.reply("Richtig! 🎉");
+  if (content === answer) {
+    await message.reply("Richtig! 🎉");
 
-      // 2. Embed schicken
-      const embed = new EmbedBuilder()
-        .setColor(0x00ff7f)
-        .setTitle("Zusatz-Info")
-        .setDescription("Hier kommt dein Zusatz-Embed!");
+    const embed = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Zusatz-Info")
+      .setDescription("Hier kommt dein Zusatz-Embed!");
 
-      await message.channel.send({ embeds: [embed] });
+    await message.channel.send({ embeds: [embed] });
 
-      // nichts anderes mehr für diese Nachricht ausführen
-      return;
-    }
-  } // ← THIS one was missing!
+    return;
+  }
 });
 
 // ------------------------------------------------------
