@@ -507,7 +507,7 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
     const embed3 = new EmbedBuilder()
       .setColor(0x00ff7f)
       .setTitle("Totenkopf Jagd")
-      .setDescription("Hier kommt dein Zusatz-Embed!");
+      .setDescription("Das ist die letzte Frage für heute, schreibe die Antwort morgen wieder mit dem Gegenstand zusammen: Dieser Mann hat hat bei einem Gefängsnisausbruch einen neuen Freund gefunden. Dieser Freund taucht öfter in der Geschichte auf. Bei seinem 2ten Auftritt in dem Anime findet dieser einen anderen Freund. Wie heißt der Freund des Freundes?");
 
     await message.channel.send({ embeds: [embed3] });
 
@@ -516,6 +516,46 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
 
 });
 
+
+// Day 12
+
+
+client.on("messageCreate", async (message) => {
+  // Bots ignorieren
+  if (message.author.bot) return;
+
+  const content = message.content.toLowerCase();
+
+ if (
+   content === "swirl pop gaimon" ||
+    content === "loli gaimon"
+   ){
+    const text = `Wunderschönen Morgen Jagi!
+test`
+
+    // normale Antwort
+    await message.reply(text);
+
+    // Embed bauen
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 10: Johann Wolfgang von Goethe")
+      .setDescription(
+        "Es ist ein Wunder, wie gut manche Menschen im Schreiben und Komponieren sind. Manche dieser Texte haben es bis zu dir und Utka-Nuna geschafft, sodass manche davon sogar vielleicht eine Bedeutung für euch haben. \n\n" +
+        "Irgendwie sind einige Wörter verloren gegangen. Schaffst du es sie wieder zu finden?"
+      );
+
+    // Embed senden
+    await message.channel.send({ embeds: [embed1] });
+
+    const pdfFile = new AttachmentBuilder("./Missing_Words.pdf");
+    await message.channel.send({ files: [pdfFile] });
+
+
+    // nichts anderes mehr für diese Nachricht ausführen
+    return;
+  }
+});
 // ------------------------------------------------------
 // MEMBER JOIN EVENT
 // ------------------------------------------------------
