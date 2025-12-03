@@ -430,10 +430,10 @@ client.on("messageCreate", async (message) => {
 
   const content = message.content.toLowerCase();
 
- if (
-   content === "cashew erdnuss godsbattler" ||
+  if (
+    content === "cashew erdnuss godsbattler" ||
     content === "cashew erdnuss mix godsbattler"
-   ){
+  ) {
     const text = `Bonjour Jagi
 
 Utka-Nuna dakt dir, dass sie mit dir dieses Jahr so viele schöne neuer Lieder entdecken konnte (obwohl die meisten davon hight entdeckt wurden). Und mit Godsbattler bist du geimeint! Weil in meinen Augen diffst du jeden möglichen Gott auf dieser Welt einfach nur indem du du bist. Bu bist mein einziger Gott *quak quak*
@@ -453,25 +453,26 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
         "E1000000M10001S11011"
       );
 
-await message.channel.send({ embeds: [embed1] });
+    await message.channel.send({ embeds: [embed1] });
 
-const answer = "baroque";
+    const answer = "baroque";
 
-if (message.content.toLowerCase() === answer) {
-    // 1. Normale Antwort
-    await message.reply("Richtig! 🎉");
+    if (message.content.toLowerCase() === answer) {
+      // 1. Normale Antwort
+      await message.reply("Richtig! 🎉");
 
-    // 2. Embed schicken
-    const embed = new EmbedBuilder()
+      // 2. Embed schicken
+      const embed = new EmbedBuilder()
         .setColor(0x00ff7f)
         .setTitle("Zusatz-Info")
         .setDescription("Hier kommt dein Zusatz-Embed!");
 
-    await message.channel.send({ embeds: [embed] });
+      await message.channel.send({ embeds: [embed] });
 
-    // nichts anderes mehr für diese Nachricht ausführen
-    return;
-}
+      // nichts anderes mehr für diese Nachricht ausführen
+      return;
+    }
+  } // ← THIS one was missing!
 });
 
 // ------------------------------------------------------
