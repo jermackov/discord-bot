@@ -453,25 +453,25 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
         "E1000000M10001S11011"
       );
 
-  await message.channel.send({ embeds: [embed1] });
+await message.channel.send({ embeds: [embed1] });
 
- const answer = "baroque";
+const answer = "baroque";
 
-    if (message.content.toLowerCase() === answer) {
-        // 1. Normale Antwort
-        await message.reply("Richtig! 🎉");
+if (message.content.toLowerCase() === answer) {
+    // 1. Normale Antwort
+    await message.reply("Richtig! 🎉");
 
-        // 2. Embed schicken
-        const embed = new EmbedBuilder()
-            .setColor(0x00ff7f)
-            .setTitle("Zusatz-Info")
-            .setDescription("Hier kommt dein Zusatz-Embed!");
+    // 2. Embed schicken
+    const embed = new EmbedBuilder()
+        .setColor(0x00ff7f)
+        .setTitle("Zusatz-Info")
+        .setDescription("Hier kommt dein Zusatz-Embed!");
 
-        await message.channel.send({ embeds: [embed] });
-   
+    await message.channel.send({ embeds: [embed] });
+
     // nichts anderes mehr für diese Nachricht ausführen
     return;
-  }
+}
 });
 
 // ------------------------------------------------------
