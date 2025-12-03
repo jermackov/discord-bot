@@ -492,7 +492,7 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
     const embed4 = new EmbedBuilder()
       .setColor(0x00ff7f)
       .setTitle("Totenkopf Jagd")
-      .setDescription("Der Mann mit Zahl in den Haaren redet in seiner ersten Szene über sein Lieblingsgetränk. Wie heißt es?");
+      .setDescription("Der Mann mit Zahl in den Haaren redet in seiner ersten Szene darüber was er am liebsten konsumiert. Wie heißt es?");
 
     await message.channel.send({ embeds: [embed4] });
   }
