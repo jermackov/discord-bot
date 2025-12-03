@@ -477,11 +477,27 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
     const embed2 = new EmbedBuilder()
       .setColor(0x00ff7f)
       .setTitle("Totenkopf Jagd")
-      .setDescription("Der Mann mit Zahl in den Haaren redet in seiner ersten Szene über sein Lieblingsgetränk. Wie heißt es?");
+      .setDescription("Der Affe der Gruppe hat ein Kind bekommen. Wie heißt dieses?");
 
     await message.channel.send({ embeds: [embed2] });
   }
 
+// ---------------------
+
+  const answer4 = "Nanday";
+
+  if (content === answer4) {
+    await message.reply("Nice! 🎉");
+
+    const embed4 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Totenkopf Jagd")
+      .setDescription("Der Mann mit Zahl in den Haaren redet in seiner ersten Szene über sein Lieblingsgetränk. Wie heißt es?");
+
+    await message.channel.send({ embeds: [embed4] });
+  }
+
+  
   // THIRD TRIGGER
   const answer3 = "earl grey";
 
