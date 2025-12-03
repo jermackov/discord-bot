@@ -445,7 +445,7 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
     // Embed bauen
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
-      .setTitle("Tag 11: Totenkopf Jagt")
+      .setTitle("Tag 11: Totenkopf Jagd")
       .setDescription(
         "Dieses Mal sollst du die Lösung von dem Rätsel alleine inden Chat schreiben." +
         "Was sagt der Text über dem Totenkopf mit Flügeln auf dem Briefkasten in einem Stück?" +
@@ -454,6 +454,20 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
       );
 
   await message.channel.send({ embeds: [embed1] });
+
+ const answer = "baroque";
+
+    if (message.content.toLowerCase() === answer) {
+        // 1. Normale Antwort
+        await message.reply("Richtig! 🎉");
+
+        // 2. Embed schicken
+        const embed = new EmbedBuilder()
+            .setColor(0x00ff7f)
+            .setTitle("Zusatz-Info")
+            .setDescription("Hier kommt dein Zusatz-Embed!");
+
+        await message.channel.send({ embeds: [embed] });
    
     // nichts anderes mehr für diese Nachricht ausführen
     return;
