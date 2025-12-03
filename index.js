@@ -484,7 +484,7 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
 
 // ---------------------
 
-  const answer4 = "Nanday";
+  const answer4 = "nanday";
 
   if (content === answer4) {
     await message.reply("Yippie! 🎉");
