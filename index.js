@@ -468,7 +468,7 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
     await message.channel.send({ embeds: [embed] });
 }
 
-// ------------------------
+// ---------------------
 
    const answer2 = "karoo";
     
