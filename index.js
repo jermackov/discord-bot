@@ -461,7 +461,6 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
 
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
-      .setTitle("")
       .setDescription("Dieses Logo bezieht sich auf eine Gruppe. Wie heißt das süßeste Mitglied dieser Gruppe?");
 
     await message.channel.send({ embeds: [embed1] });
@@ -476,7 +475,7 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
 
     const embed2 = new EmbedBuilder()
       .setColor(0x00ff7f)
-      .setTitle("")
+      .setTitle(".")
       .setDescription("Der Mann mit Zahl in den Haaren redet in seiner ersten Szene über sein Lieblingsgetränk. Wie heißt es?");
 
     await message.channel.send({ embeds: [embed2] });
