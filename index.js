@@ -467,6 +467,21 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
 
     await message.channel.send({ embeds: [embed] });
 
+
+
+ // THIRD TRIGGER
+  const answer = "earl grey";
+    
+  if (content === answer) {
+    await message.reply("Nice! 🎉");
+
+    const embed = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Zusatz-Info")
+      .setDescription("Hier kommt dein Zusatz-Embed!");
+
+    await message.channel.send({ embeds: [embed] });
+
     return;
   }
 });
