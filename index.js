@@ -466,13 +466,13 @@ Hoffentlich können Utka-Nuna und du bald high auf der Couch in eurer Wohnung zu
       .setDescription("Hier kommt dein Zusatz-Embed!");
 
     await message.channel.send({ embeds: [embed] });
-
+}
 
 
  // THIRD TRIGGER
-  const answer = "earl grey";
+  const answer2 = "earl grey";
     
-  if (content === answer) {
+  if (content === answer2) {
     await message.reply("Nice! 🎉");
 
     const embed = new EmbedBuilder()
