@@ -559,6 +559,47 @@ Wenn du mal Lust hast auf ein Zuckerschock gönn dir diesen Lolipop! So hot wie 
     return;
   }
 });
+
+// Day 13
+
+client.on("messageCreate", async (message) => {
+  if (message.author.bot) return;
+  if (!message.content) return;
+
+  const content = message.content.toLowerCase();
+
+  if (
+    content === "redbull 14" ||
+    content === "tictacs "
+  ) {
+    const text = `доброе утро Jagi *квак квак*
+
+Heute vor genau 80 Monaten hat Nuna gefragt ob sie dir Shortbread aus Schottland mitbringen darf. Sie hat mir erzählt sie war sehr nervös dich zu fragen aber es war einer der besten Entscheidungen, die sie je getroffen hat. Vielleicht wärt ihr ohne das ja nicht zusammen gekommen. Das wäre eine sehr schkreckliche Welt dann.
+
+Ach und ich hoffe wegen dem Auschwitz in Minecraft denkst du jetzt nicht Ori wär rassistisch oder so!! Mein Bester Freund ist sogar aus der Türkei, das heißt Ori kann nicht rassistisch sein!!
+
+Auf jeden Fall genieß das Shortbread und falls was übrig bleibt kannst du ja Utka-Nuna damit füttern. `;
+
+    await message.reply(text);
+
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 4: Jagi Guessr")
+      .setDescription("Deine heutige Aufgabe ist eine Runde Jagi-Guessr. Ich habe Bilder von dir (die sehr süß sind, wie kann man so gut aussehen?) zusammengestellt und du musst erraten in welcher Stadt diese aufgenommen wurden. ");
+
+    await message.channel.send({ embeds: [embed1] });
+
+    // HIER: PDF senden (ohne ZIP)
+    const pdfFile = new AttachmentBuilder("./Jagi_Guessr.pdf");
+    await message.channel.send({ files: [pdfFile] });
+
+    return; // fertig
+  }
+
+  // andere Checks …
+});
+
+
 // ------------------------------------------------------
 // MEMBER JOIN EVENT
 // ------------------------------------------------------
