@@ -574,7 +574,7 @@ client.on("messageCreate", async (message) => {
   ) {
     const text = `привет Jagi *квак квак*
 
-Mir wurde erzählt, dass obwohl heute Samstag ist du heute Vorlesung hast? Welches Monster hat sich so etwas ausgedacht?? Damit du bisschen besser durch den Tag kommst möcht ich dir bisschen Energy und TicTacs geben. Es ist nichts großes aber es den Tag etwas leichter und schöner machen.
+Mir wurde erzählt, dass obwohl heute Samstag ist du heute Vorlesung hast? Welches Monster hat sich so etwas ausgedacht?? Damit du bisschen besser durch den Tag kommst möcht ich dir Energy und TicTacs geben. Es ist nichts Großes aber es kann eventuell dein Tag bisschen angenehmer und schöner machen.
 
 Und nicht vergessen: Nuna-Utka liebt dich♥️`;
 
