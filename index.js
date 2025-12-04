@@ -532,9 +532,9 @@ client.on("messageCreate", async (message) => {
    ){
     const text = `Ich hoffe du hast gut geschlafen du Süßer.
 
-    Sehr gute Arbeit bei diesem Rätsel, hoffentlich hat dir der One Piece throwback gefallen *ich hatte schon immer einen Crush auf Karoo quak quak*
+Sehr gute Arbeit bei diesem Rätsel, hoffentlich hat dir der One Piece throwback gefallen *ich hatte schon immer einen Crush auf Karoo quak quak*
 
-    Wenn du mal Lust hast auf ein Zuckerschock gönn dir diesen Lolipop! So hot wie du bist musst du aber aufpassen, dass er nicht schmilzt wenn der in deiner Nähe ist!!!`
+Wenn du mal Lust hast auf ein Zuckerschock gönn dir diesen Lolipop! So hot wie du bist musst du aber aufpassen, dass er nicht schmilzt wenn der in deiner Nähe ist!!!`
 
     // normale Antwort
     await message.reply(text);
