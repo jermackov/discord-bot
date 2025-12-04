@@ -569,28 +569,26 @@ client.on("messageCreate", async (message) => {
   const content = message.content.toLowerCase();
 
   if (
-    content === "redbull 14" ||
-    content === "tictacs "
+    content === "redbull 141414141,5" ||
+    content === "tictacs 141414141,5"
   ) {
-    const text = `доброе утро Jagi *квак квак*
+    const text = `привет Jagi *квак квак*
 
-Heute vor genau 80 Monaten hat Nuna gefragt ob sie dir Shortbread aus Schottland mitbringen darf. Sie hat mir erzählt sie war sehr nervös dich zu fragen aber es war einer der besten Entscheidungen, die sie je getroffen hat. Vielleicht wärt ihr ohne das ja nicht zusammen gekommen. Das wäre eine sehr schkreckliche Welt dann.
+Mir wurde erzählt, dass obwohl heute Samstag ist du heute Vorlesung hast? Welches Monster hat sich so etwas ausgedacht?? Damit du bisschen besser durch den Tag kommst möcht ich dir bisschen Energy und TicTacs geben. Es ist nichts großes aber es den Tag etwas leichter und schöner machen.
 
-Ach und ich hoffe wegen dem Auschwitz in Minecraft denkst du jetzt nicht Ori wär rassistisch oder so!! Mein Bester Freund ist sogar aus der Türkei, das heißt Ori kann nicht rassistisch sein!!
-
-Auf jeden Fall genieß das Shortbread und falls was übrig bleibt kannst du ja Utka-Nuna damit füttern. `;
+Und nicht vergessen: Nuna-Utka liebt dich♥️`;
 
     await message.reply(text);
 
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
-      .setTitle("Tag 4: Jagi Guessr")
-      .setDescription("Deine heutige Aufgabe ist eine Runde Jagi-Guessr. Ich habe Bilder von dir (die sehr süß sind, wie kann man so gut aussehen?) zusammengestellt und du musst erraten in welcher Stadt diese aufgenommen wurden. ");
+      .setTitle("Tag 13: Eye eye eye")
+      .setDescription("Du schaust jeden Tag bis zu hunderten, wenn nicht sogar tausenden Menschen in die Augen. Doch erkennst du alle Augen von denen, die dir nahestehen? ");
 
     await message.channel.send({ embeds: [embed1] });
 
     // HIER: PDF senden (ohne ZIP)
-    const pdfFile = new AttachmentBuilder("./Jagi_Guessr.pdf");
+    const pdfFile = new AttachmentBuilder("./Augen.pdf");
     await message.channel.send({ files: [pdfFile] });
 
     return; // fertig
