@@ -528,10 +528,13 @@ client.on("messageCreate", async (message) => {
 
  if (
    content === "swirl pop gaimon" ||
-    content === "loli gaimon"
+    content === "lollipop gaimon"
    ){
-    const text = `Wunderschönen Morgen Jagi!
-test`
+    const text = `Ich hoffe du hast gut geschlafen du Süßer.
+
+    Sehr gute Arbeit bei diesem Rätsel, hoffentlich hat dir der One Piece throwback gefallen *ich hatte schon immer einen Crush auf Karoo quak quak*
+
+    Wenn du mal Lust hast auf ein Zuckerschock gönn dir diesen Lolipop! So hot wie du bist musst du aber aufpassen, dass er nicht schmilzt wenn der in deiner Nähe ist!!!`
 
     // normale Antwort
     await message.reply(text);
@@ -539,16 +542,16 @@ test`
     // Embed bauen
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
-      .setTitle("Tag 10: Johann Wolfgang von Goethe")
+      .setTitle("Tag 12: Back to the ~Future~ Matheunterricht")
       .setDescription(
-        "Es ist ein Wunder, wie gut manche Menschen im Schreiben und Komponieren sind. Manche dieser Texte haben es bis zu dir und Utka-Nuna geschafft, sodass manche davon sogar vielleicht eine Bedeutung für euch haben. \n\n" +
-        "Irgendwie sind einige Wörter verloren gegangen. Schaffst du es sie wieder zu finden?"
+        "Du bekommst eine Datei, wobei du alle Aufgaben lösen musst, um auf eine Lösungszahl zu kommen. \n\n" +
+        "Viel Erfolg!"
       );
 
     // Embed senden
     await message.channel.send({ embeds: [embed1] });
 
-    const pdfFile = new AttachmentBuilder("./Missing_Words.pdf");
+    const pdfFile = new AttachmentBuilder("./Math.pdf");
     await message.channel.send({ files: [pdfFile] });
 
 
