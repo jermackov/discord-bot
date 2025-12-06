@@ -656,7 +656,7 @@ client.on("messageCreate", async (message) => {
     content === "maske luft" ||
     content === "masken luft"
   ) {
-    const text = `*quak* Hallo Jagi Schatzi.
+    const text = `*quak* hallo Jagi Schatzi
 
 Leider weiß ich nicht was mit Luft gemeint sein soll oder wie es uns helfen soll Takopi zu finden... Alles was wir jetzt machen können ist wahrscheinlich zu überlegen und abzuwarten. Und vielleicht versuchen uns etwas abzulenken, damit es uns nicht zu schlecht geht. `;
 
@@ -685,6 +685,46 @@ Leider weiß ich nicht was mit Luft gemeint sein soll oder wie es uns helfen sol
   // hier kommen deine anderen message-Checks (hello, how are you, zip, …)
 });
 
+
+// ------------------------------------------------------
+// DAY 16
+// ------------------------------------------------------
+
+client.on("messageCreate", async (message) => {
+  // Bots ignorieren
+  if (message.author.bot) return;
+
+  const content = message.content.toLowerCase();
+
+ if (content === "seelenwärmer schwert") {
+    const text = `안녕 자기, 잘잤엉? ㅎㅎ
+
+Ich hoffe die Mr. Rabbit Magic Show hat dir gefallen. Wenn ja kannst du ja mit Nuna zusammen das Spiel weiterspielen damit ihr zusammen die Rätsel weiter lösen könnt.
+
+Als heutiges Geschenk gibt's einen Seelenwärmer. Das ist ein Pudding, und perfekt wenn du an einem kalten Tag ein warmes, süßes Dessert willst! (obwohl du schon das Maximum von süß sein erreicht hast)
+
+Bleib warm und hab einen schönen Start in die Woche🥰`;
+
+    // normale Antwort
+    await message.reply(text);
+
+    // Embed bauen
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 8: Grüne Hände")
+      .setDescription(
+        "Du siehst sie fast täglich, aber nur von außen. Die Frau die Beutelwölfe und Falken kontrolliert." +
+        "Du musst in sie hineingehen und ihre Hände betrachten. Dort finest du einen Code.\n\n" +
+        "Wie endet dieser Code? 161211 _ _ _"
+      );
+
+    // Embed senden
+    await message.channel.send({ embeds: [embed1] });
+
+    // nichts anderes mehr für diese Nachricht ausführen
+    return;
+  }
+});
 
 // ------------------------------------------------------
 // MEMBER JOIN EVENT
