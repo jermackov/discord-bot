@@ -629,7 +629,7 @@ Hast du Takopi so wenig Taschengeld gegeben, dass er sowas nötig hat? ㅠㅠ Wi
       .setColor(0x00ff7f)
       .setTitle("Tag 14: Ddakji")
       .setDescription(
-        "Es geht die Nachricht herum, dass eine sehr junge Frau mit dunklen Haaren ein komisches Spiel mit blauen und roten papieren spielt. Es soll wohl jemand sein, die dir sehr nahe steht" +
+        "Es geht die Nachricht herum, dass eine sehr junge Frau mit dunklen Haaren ein komisches Spiel mit blauen und roten Papieren spielt. Es soll wohl jemand sein, die dir sehr nahe steht" +
         "Fordere sie zu Ddakji heraus. Du musst 3 Runden hinterinander gegen sie gewinnen, um ein Hinweis zu bekommen." +
         "Wenn du den Hinweis bekommst, sollst du die Erdnussbutter Cups mit deiner Herausforderin teilen."
       );
