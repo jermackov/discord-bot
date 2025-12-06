@@ -676,7 +676,7 @@ Leider weiß ich nicht was mit Luft gemeint sein soll oder wie es uns helfen sol
     // Erst das Embed schicken
    await message.channel.send({ embeds: [embed1] });
 
-    const pdfFile = new AttachmentBuilder("./Shroom.pdf");
+    const pdfFile = new AttachmentBuilder("./Shrooms.pdf");
     await message.channel.send({ files: [pdfFile] });
 
     return; // nichts weiteres für diese Nachricht ausführen
