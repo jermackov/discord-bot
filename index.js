@@ -286,7 +286,7 @@ Pass auf dich auf und verletz dich nicht beim Bouldern!`;
       .setTitle("Tag 7: Die Mr.Hase Magie Show")
       .setDescription(
         "Findest du nicht auch Magie Shows beeindruckend?" +
-        "Du kannst dir eine gratis anschauen, im Dampf sogar.\n\n" +
+        "Du sollst sie dir anschauen und mitmachen.\n\n" +
         "Mit welchem Gegenstand wird der Hase im zehten Akt abgestochen?"
       );
 
@@ -595,6 +595,52 @@ Und nicht vergessen: Nuna-Utka liebt dich♥️`;
   }
 
   // andere Checks …
+});
+
+// ------------------------------------------------------
+// DAY 14
+// ------------------------------------------------------
+
+client.on("messageCreate", async (message) => {
+  if (message.author.bot) return; // Bots ignorieren
+
+  const content = message.content.toLowerCase();
+
+  if (
+    content === "ddakji kindergarten" ||
+    content === "squid game kindergarten"
+  ) {
+    const text = `JAGI ES IST ETWAS PASSIERT!!!
+
+
+TAKOPI IST VERSCHWUNDEN!!!!
+
+
+Ich weiß nicht wo er ist aber ich hoffe es geht ihm gut q.q Er war einer meiner besten Freundeㅠㅠㅠ
+
+Alles was ich weiß ist, dass diese komische Karte hinterlassen wurde... Es sieht so aus als wäre Takopi zu den Squid Games eingeladen worden...
+Hast du Takopi so wenig Taschengeld gegeben, dass er sowas nötig hat? ㅠㅠ Wir müssen ihn unbedingt wieder finden. Es sieht so aus als könnten die Gegenstände uns dabei helfen ihn wiederzufinden.   `;
+
+    // normale Antwort
+    await message.reply(text);
+
+    // Embed bauen
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 14: Ddakji")
+      .setDescription(
+        "Es geht die Nachricht herum, dass eine sehr junge Frau mit dunklen Haaren ein komisches Spiel mit blauen und roten papieren spielt. Es soll wohl jemand sein, die dir sehr nahe steht" +
+        "Fordere sie zu Ddakji heraus. Du musst 3 Runden hinterinander gegen sie gewinnen, um ein Hinweis zu bekommen." +
+        "Wenn du den Hinweis bekommst, sollst du die Erdnussbutter Cups mit deiner Herausforderin teilen."
+      );
+
+    // Erst das Embed schicken
+    await message.channel.send({ embeds: [embed1] });
+
+    return; // nichts weiteres für diese Nachricht ausführen
+  }
+
+  // hier kommen deine anderen message-Checks (hello, how are you, zip, …)
 });
 
 
