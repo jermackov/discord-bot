@@ -619,7 +619,7 @@ TAKOPI IST VERSCHWUNDEN!!!!
 Ich weiß nicht wo er ist aber ich hoffe es geht ihm gut q.q Er war einer meiner besten Freundeㅠㅠㅠ
 
 Alles was ich weiß ist, dass diese komische Karte hinterlassen wurde... Es sieht so aus als wäre Takopi zu den Squid Games eingeladen worden...
-Hast du Takopi so wenig Taschengeld gegeben, dass er sowas nötig hat? ㅠㅠ Wir müssen ihn unbedingt wieder finden. Es sieht so aus als könnten die Gegenstände uns dabei helfen ihn wiederzufinden.   `;
+Hast du Takopi so wenig Taschengeld gegeben, dass er sowas nötig hat? ㅠㅠ Wir müssen ihn unbedingt wieder zurück zu dir bringen. Es sieht so aus als könnten die Gegenstände uns dabei helfen ihn wiederzufinden.   `;
 
     // normale Antwort
     await message.reply(text);
