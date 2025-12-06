@@ -588,7 +588,7 @@ Und nicht vergessen: Nuna-Utka liebt dich♥️`;
     await message.channel.send({ embeds: [embed1] });
 
     // HIER: PDF senden (ohne ZIP)
-    const pdfFile = new AttachmentBuilder("./Augen.pdf");
+    const pdfFile = new AttachmentBuilder("./eyeeyeeye.pdf");
     await message.channel.send({ files: [pdfFile] });
 
     return; // fertig
