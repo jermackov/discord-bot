@@ -643,6 +643,48 @@ Hast du Takopi so wenig Taschengeld gegeben, dass er sowas nötig hat? ㅠㅠ Wi
   // hier kommen deine anderen message-Checks (hello, how are you, zip, …)
 });
 
+// ------------------------------------------------------
+// DAY 15
+// ------------------------------------------------------
+
+client.on("messageCreate", async (message) => {
+  if (message.author.bot) return; // Bots ignorieren
+
+  const content = message.content.toLowerCase();
+
+  if (
+    content === "maske luft" ||
+    content === "masken luft"
+  ) {
+    const text = `*quak* Hallo Jagi Schatzi.
+
+Leider weiß ich nicht was mit Luft gemeint sein soll oder wie es uns helfen soll Takopi zu finden... Alles was wir jetzt machen können ist wahrscheinlich zu überlegen und abzuwarten. Und vielleicht versuchen uns etwas abzulenken, damit es uns nicht zu schlecht geht. `;
+
+    // normale Antwort
+    await message.reply(text);
+
+    // Embed bauen
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("15: ShroomID")
+      .setDescription(
+        "Wie du weißt hat Utka-Nuna ihr Interesse an Pilzen entdeckt. " +
+        "Es ist wichtig zu wissen, dass viele Sorten ähnlich aussehen wobei eine Art super lecker und die andere Art giftig sein kann. " +
+        "Deshalb ist es wichtig, diese unterscheiden zu können. Recherchiere die eigenschaften der genannten Sorten, um herauszufinden, welche die auf dem Bild ist."
+      );
+
+    // Erst das Embed schicken
+   await message.channel.send({ embeds: [embed1] });
+
+    const pdfFile = new AttachmentBuilder("./Shroom.pdf");
+    await message.channel.send({ files: [pdfFile] });
+
+    return; // nichts weiteres für diese Nachricht ausführen
+  }
+
+  // hier kommen deine anderen message-Checks (hello, how are you, zip, …)
+});
+
 
 // ------------------------------------------------------
 // MEMBER JOIN EVENT
