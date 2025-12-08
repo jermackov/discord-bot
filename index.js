@@ -696,14 +696,14 @@ client.on("messageCreate", async (message) => {
 
   const content = message.content.toLowerCase();
 
- if (content === "seelenwärmer schwert") {
-    const text = `안녕 자기, 잘잤엉? ㅎㅎ
+ if (content === "nudeln enigma") {
+    const text = `자기 안녕 ㅎㅎ
 
-Ich hoffe die Mr. Rabbit Magic Show hat dir gefallen. Wenn ja kannst du ja mit Nuna zusammen das Spiel weiterspielen damit ihr zusammen die Rätsel weiter lösen könnt.
+Ich frage und schaue gerade überall herum, leider noch nicht viel Neues wegen Takopi. Ich hoffe er ist wirklich selber irgendwo hingegangen und wurde nicht entführt...
 
-Als heutiges Geschenk gibt's einen Seelenwärmer. Das ist ein Pudding, und perfekt wenn du an einem kalten Tag ein warmes, süßes Dessert willst! (obwohl du schon das Maximum von süß sein erreicht hast)
+Vielleicht können ja diese Weihnachts-Nudeln dich ein bisschen ablenken und dich wieder ein bisschen in Weihnachtsstimmung bringen (obwohl keine Nudel so perfekt ist wie deine).
 
-Bleib warm und hab einen schönen Start in die Woche🥰`;
+Übrigens, Enigma ist eine ungewöhnliche, seltene Variante von Psilocybe cubensis, die nicht wie typische Pilze Hüte und Stiele bildet. Stattdessen wächst sie als dicht verwachsene, hirnartig wirkende Masse. Sie ist für ihren hohen Psilocybin-Gehalt bekannt und vielleicht hat Utka ja bald die Möglichkeit auch diese zu züchten.`;
 
     // normale Antwort
     await message.reply(text);
@@ -711,11 +711,11 @@ Bleib warm und hab einen schönen Start in die Woche🥰`;
     // Embed bauen
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
-      .setTitle("Tag 8: Grüne Hände")
+      .setTitle("Tag 16: MCguessr")
       .setDescription(
-        "Du siehst sie fast täglich, aber nur von außen. Die Frau die Beutelwölfe und Falken kontrolliert." +
-        "Du musst in sie hineingehen und ihre Hände betrachten. Dort finest du einen Code.\n\n" +
-        "Wie endet dieser Code? 161211 _ _ _"
+        "Falls du selber mal entführt wirst, ist es immer gut zu wissen, wo du dich befindest." +
+        "Gehe zurück zum Ende der Eisrutsche und folge dem Wasser. Du musst erraten in welcher Stadt sich das Gebäude befindet in dem du drinne bist. Dieser Code wird dir helfen auf das Ergebnis zu kommen:\n\n" +
+        "3 5 59 3 3 56 12345"
       );
 
     // Embed senden
