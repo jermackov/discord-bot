@@ -713,7 +713,7 @@ Vielleicht können ja diese Weihnachts-Nudeln dich ein bisschen ablenken und dic
       .setColor(0x00ff7f)
       .setTitle("Tag 16: MCguessr")
       .setDescription(
-        "Falls du selber mal entführt wirst, ist es immer gut zu wissen, wo du dich befindest." +
+        "Falls du selber mal entführt wirst, ist es immer gut zu wissen, wo du dich befindest. " +
         "Gehe zurück zum Ende der Eisrutsche und folge dem Wasser. Du musst erraten in welcher Stadt sich das Gebäude befindet in dem du drinne bist. Dieser Code wird dir helfen auf das Ergebnis zu kommen:\n\n" +
         "3 5 59 3 3 56 12345"
       );
