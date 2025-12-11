@@ -788,7 +788,7 @@ in denen wir glücklich waren, und holen ein Stück dieses Gefühls zurück. Bil
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
       .setTitle("Tag 18: Türen zu Erinnerungen")
-      .setDescription("Es wurden Bilder aus Videos genommen, die du gut kennst. Errate den Titel aller. ");
+      .setDescription("Es wurden Bilder aus Videos genommen, die du gut kennst. Errate die Titel aller davon. ");
 
     await message.channel.send({ embeds: [embed1] });
 
@@ -844,7 +844,7 @@ Du hast es verdient.`;
 
 
 // ------------------------------------------------------
-// DAY 19
+// DAY 20
 // ------------------------------------------------------
 
 client.on("messageCreate", async (message) => {
@@ -857,25 +857,23 @@ client.on("messageCreate", async (message) => {
     content === "drachenzungen frühling" ||
     content === "drachenzunge frühling"
   ) {
-    const text = `Hallo Jagi, es muss echt anstrengend sein. 
+    const text = `JAGI ICH HABS! Ich weiß jetzt was mit Kamera gemeint ist! 
 
-Schon wieder weiß ich leider nicht was das bedeuten soll... Vielleicht hast du eine Idee? 
-
-Ich hab dafür eine Idee wie ich deine Stimmung vielleicht besser machen könnte: Ein Blick auf alte Fotos kann uns sofort wärmen. Sie erinnern uns an Momente,
-in denen wir glücklich waren, und holen ein Stück dieses Gefühls zurück. Bilder sind kleine Türen zu Erinnerungen – und manchmal reicht ein kurzer Blick, um uns wieder zum lächeln zu bringen. `;
+Ich glaub wir wissen jetzt wo Takopi ist, oder besser gesagt, wer ihn entführt hat. Mit Kamera war die Überwachungskamera in deinem Zimmer gemeint. Ich habe mir mal die Aufnahmen von dem Abend des Geschehens angeschaut und hab gesehen, wie jemand in dein Zimmer eingebrochen ist!!!!
+In einem Frame konnte man sein gesicht leicht erkennen. Ich schicke dir das Bild, vielleicht erkennst du ihn ja. `;
 
     await message.reply(text);
 
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
-      .setTitle("Tag 18: Türen zu Erinnerungen")
-      .setDescription("Es wurden Bilder aus Videos genommen, die du gut kennst. Errate den Titel aller. ");
+      .setTitle("Tag 20: Der Einbrecher")
+      .setDescription("Wer ist der Einbrecher? Melde dich unaufällig bei ihm und frag ihn, was er am Abend vom 13.Dezember gemacht hat. ");
 
     await message.channel.send({ embeds: [embed1] });
 
     // HIER: PDF senden (ohne ZIP)
-    const pdfFile = new AttachmentBuilder("./Screenshots.pdf");
-    await message.channel.send({ files: [pdfFile] });
+    const pngFile = new AttachmentBuilder("./Überwachungskamera.png");
+    await message.channel.send({ files: [pngFile] });
 
     return; // fertig
   }
