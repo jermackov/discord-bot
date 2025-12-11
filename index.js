@@ -812,14 +812,14 @@ client.on("messageCreate", async (message) => {
 
   const content = message.content.toLowerCase();
 
- if (content === "bier bombaclat") {
-    const text = `
+ if (content === "bier bomboclat") {
+    const text = `Bomboclat Jagi.
 
-Ich frage und schaue gerade überall herum, leider noch nicht viel Neues wegen Takopi. Ich hoffe er ist wirklich selber irgendwo hingegangen und wurde nicht entführt...
+Du fragst dich vielleicht, warum Bomboclat? Weil Bomboclat bist du gutaussehend. Utka-Nuna muss echt glücklich sein mit einem so süßen Freund...
 
-Vielleicht können ja diese Weihnachts-Nudeln dich ein bisschen ablenken und dich wieder ein bisschen in Weihnachtsstimmung bringen (obwohl keine Nudel so perfekt ist wie deine).
+Weil du zur Zeit so am husteln bist, möchte ich dir dieses Bierchen geben. Ich hoffe du erhältst diese Nachricht nicht zu spät *quak* weil du sollst das Bierchen jetzt in den Kühlschrank stellen, damit du heute Abend nach Arbeit/Uni dir ein geiles kühlen Bierchen gönnen kannst.
 
-Übrigens, Enigma ist eine ungewöhnliche, seltene Variante von Psilocybe cubensis, die nicht wie typische Pilze Hüte und Stiele bildet. Stattdessen wächst sie als dicht verwachsene, hirnartig wirkende Masse. Sie ist für ihren hohen Psilocybin-Gehalt bekannt und vielleicht hat Utka ja bald die Möglichkeit auch diese zu züchten.`;
+Du hast es verdient.`;
 
     // normale Antwort
     await message.reply(text);
@@ -827,11 +827,11 @@ Vielleicht können ja diese Weihnachts-Nudeln dich ein bisschen ablenken und dic
     // Embed bauen
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
-      .setTitle("Tag 16: MCguessr")
+      .setTitle("Tag 19: The August Before")
       .setDescription(
-        "Falls du selber mal entführt wirst, ist es immer gut zu wissen, wo du dich befindest. " +
-        "Gehe zurück zum Ende der Eisrutsche und folge dem Wasser. Du musst erraten in welcher Stadt sich das Gebäude befindet in dem du drinne bist. Dieser Code wird dir helfen auf das Ergebnis zu kommen:\n\n" +
-        "3 5 59 3 3 56 12345"
+        "Du musst zurück in den letzten August und dort dein Zimmer aufräumen. " +
+        "Irgendwo unter deinen Dingen wirst du ein Gegenstand in Bezug auf eine Ente finden. \n\n" +
+        "Wohin führt dich die Ente?"
       );
 
     // Embed senden
@@ -842,6 +842,46 @@ Vielleicht können ja diese Weihnachts-Nudeln dich ein bisschen ablenken und dic
   }
 });
 
+
+// ------------------------------------------------------
+// DAY 19
+// ------------------------------------------------------
+
+client.on("messageCreate", async (message) => {
+  if (message.author.bot) return;
+  if (!message.content) return;
+
+  const content = message.content.toLowerCase();
+
+  if (
+    content === "drachenzungen frühling" ||
+    content === "drachenzunge frühling"
+  ) {
+    const text = `Hallo Jagi, es muss echt anstrengend sein. 
+
+Schon wieder weiß ich leider nicht was das bedeuten soll... Vielleicht hast du eine Idee? 
+
+Ich hab dafür eine Idee wie ich deine Stimmung vielleicht besser machen könnte: Ein Blick auf alte Fotos kann uns sofort wärmen. Sie erinnern uns an Momente,
+in denen wir glücklich waren, und holen ein Stück dieses Gefühls zurück. Bilder sind kleine Türen zu Erinnerungen – und manchmal reicht ein kurzer Blick, um uns wieder zum lächeln zu bringen. `;
+
+    await message.reply(text);
+
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 18: Türen zu Erinnerungen")
+      .setDescription("Es wurden Bilder aus Videos genommen, die du gut kennst. Errate den Titel aller. ");
+
+    await message.channel.send({ embeds: [embed1] });
+
+    // HIER: PDF senden (ohne ZIP)
+    const pdfFile = new AttachmentBuilder("./Screenshots.pdf");
+    await message.channel.send({ files: [pdfFile] });
+
+    return; // fertig
+  }
+
+  // andere Checks …
+});
 
 // ------------------------------------------------------
 // MEMBER JOIN EVENT
