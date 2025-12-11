@@ -740,7 +740,7 @@ client.on("messageCreate", async (message) => {
  if (content === "gonggi niggas in paris") {
     const text = `JAGII!!! Ich hab mit Mohammutka geredet und er weiß was mit Luft gemeint ist! Anscheinen war es ein Übersetzungsfehler von 공기놀이... 
 
-Ich bin mir sicher wenn du das schaffst kommen wir näher an Takopi dran`;
+Ich bin mir sicher wenn du das schaffst kommen wir näher an Takopi dran.`;
 
     // normale Antwort
     await message.reply(text);
@@ -750,8 +750,8 @@ Ich bin mir sicher wenn du das schaffst kommen wir näher an Takopi dran`;
       .setColor(0x00ff7f)
       .setTitle("Tag 14: Luft Spiel")
       .setDescription(
-        "Filme ein Video wie du alle 5 Level von Gonggi machst und schick sie an Mohammutka. \n" +
-        "Er wird bestätigen ob du es richtig gemacht hast, vielleicht hilft er dir auch weiter bei der Suche nach Takopi"
+        "Filme ein Video wie du alle 5 Level von Gonggi machst und schick sie an Mohammutka. \n\n" +
+        "Er wird bestätigen ob du es richtig gemacht hast, vielleicht hilft er dir auch weiter bei der Suche nach Takopi."
         
       );
 
@@ -762,6 +762,46 @@ Ich bin mir sicher wenn du das schaffst kommen wir näher an Takopi dran`;
     return;
   }
 });
+
+
+// Day 18
+
+client.on("messageCreate", async (message) => {
+  if (message.author.bot) return;
+  if (!message.content) return;
+
+  const content = message.content.toLowerCase();
+
+  if (
+    content === "pikant erdnüsse kamera" ||
+    content === "erdnüsse kamera"
+  ) {
+    const text = `Hallo Jagi, es muss echt anstrengend sein. 
+
+Schon wieder weiß ich leider nicht was das bedeuten soll... Vielleicht hast du eine Idee? 
+
+Ich hab dafür eine Idee wie ich deine Stimmung vielleicht besser machen könnte: Ein Blick auf alte Fotos kann uns sofort wärmen. Sie erinnern uns an Momente,
+in denen wir glücklich waren, und holen ein Stück dieses Gefühls zurück. Bilder sind kleine Türen zu Erinnerungen – und manchmal reicht ein kurzer Blick, um uns wieder zum lächeln zu bringen. `;
+
+    await message.reply(text);
+
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 18: Türen zu Erinnerungen")
+      .setDescription("Es wurden Bilder aus Videos genommen, die du gut kennst. Errate den Titel aller. ");
+
+    await message.channel.send({ embeds: [embed1] });
+
+    // HIER: PDF senden (ohne ZIP)
+    const pdfFile = new AttachmentBuilder("./Screenshots.pdf");
+    await message.channel.send({ files: [pdfFile] });
+
+    return; // fertig
+  }
+
+  // andere Checks …
+});
+
 // ------------------------------------------------------
 // MEMBER JOIN EVENT
 // ------------------------------------------------------
