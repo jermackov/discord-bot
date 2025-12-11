@@ -803,6 +803,47 @@ in denen wir glücklich waren, und holen ein Stück dieses Gefühls zurück. Bil
 });
 
 // ------------------------------------------------------
+// DAY 19
+// ------------------------------------------------------
+
+client.on("messageCreate", async (message) => {
+  // Bots ignorieren
+  if (message.author.bot) return;
+
+  const content = message.content.toLowerCase();
+
+ if (content === "bier bombaclat") {
+    const text = `
+
+Ich frage und schaue gerade überall herum, leider noch nicht viel Neues wegen Takopi. Ich hoffe er ist wirklich selber irgendwo hingegangen und wurde nicht entführt...
+
+Vielleicht können ja diese Weihnachts-Nudeln dich ein bisschen ablenken und dich wieder ein bisschen in Weihnachtsstimmung bringen (obwohl keine Nudel so perfekt ist wie deine).
+
+Übrigens, Enigma ist eine ungewöhnliche, seltene Variante von Psilocybe cubensis, die nicht wie typische Pilze Hüte und Stiele bildet. Stattdessen wächst sie als dicht verwachsene, hirnartig wirkende Masse. Sie ist für ihren hohen Psilocybin-Gehalt bekannt und vielleicht hat Utka ja bald die Möglichkeit auch diese zu züchten.`;
+
+    // normale Antwort
+    await message.reply(text);
+
+    // Embed bauen
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 16: MCguessr")
+      .setDescription(
+        "Falls du selber mal entführt wirst, ist es immer gut zu wissen, wo du dich befindest. " +
+        "Gehe zurück zum Ende der Eisrutsche und folge dem Wasser. Du musst erraten in welcher Stadt sich das Gebäude befindet in dem du drinne bist. Dieser Code wird dir helfen auf das Ergebnis zu kommen:\n\n" +
+        "3 5 59 3 3 56 12345"
+      );
+
+    // Embed senden
+    await message.channel.send({ embeds: [embed1] });
+
+    // nichts anderes mehr für diese Nachricht ausführen
+    return;
+  }
+});
+
+
+// ------------------------------------------------------
 // MEMBER JOIN EVENT
 // ------------------------------------------------------
 
