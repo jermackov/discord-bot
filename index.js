@@ -738,9 +738,7 @@ client.on("messageCreate", async (message) => {
   const content = message.content.toLowerCase();
 
  if (content === "gonggi niggas in paris") {
-    const text = `자기 안녕 ㅎㅎ
-
-JAGII!!! Ich hab mit Mohammutka geredet und er weiß was mit Luft gemeint ist! Anscheinen war es ein Übersetzungsfehler von 공기놀이... 
+    const text = `JAGII!!! Ich hab mit Mohammutka geredet und er weiß was mit Luft gemeint ist! Anscheinen war es ein Übersetzungsfehler von 공기놀이... 
 
 Ich bin mir sicher wenn du das schaffst kommen wir näher an Takopi dran`;
 
