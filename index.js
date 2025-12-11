@@ -666,7 +666,7 @@ Leider weiß ich nicht was mit Luft gemeint sein soll oder wie es uns helfen sol
     // Embed bauen
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
-      .setTitle("15: ShroomID")
+      .setTitle("Tag 15: ShroomID")
       .setDescription(
         "Wie du weißt hat Utka-Nuna ihr Interesse an Pilzen entdeckt. " +
         "Es ist wichtig zu wissen, dass viele Sorten ähnlich aussehen wobei eine Art super lecker und die andere Art giftig sein kann. " +
@@ -726,6 +726,44 @@ Vielleicht können ja diese Weihnachts-Nudeln dich ein bisschen ablenken und dic
   }
 });
 
+
+// ------------------------------------------------------
+// DAY 17
+// ------------------------------------------------------
+
+client.on("messageCreate", async (message) => {
+  // Bots ignorieren
+  if (message.author.bot) return;
+
+  const content = message.content.toLowerCase();
+
+ if (content === "gonggi niggas in paris") {
+    const text = `자기 안녕 ㅎㅎ
+
+JAGII!!! Ich hab mit Mohammutka geredet und er weiß was mit Luft gemeint ist! Anscheinen war es ein Übersetzungsfehler von 공기놀이... 
+
+Ich bin mir sicher wenn du das schaffst kommen wir näher an Takopi dran`;
+
+    // normale Antwort
+    await message.reply(text);
+
+    // Embed bauen
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 14: Luft Spiel")
+      .setDescription(
+        "Filme ein Video wie du alle 5 Level von Gonggi machst und schick sie an Mohammutka. \n" +
+        "Er wird bestätigen ob du es richtig gemacht hast, vielleicht hilft er dir auch weiter bei der Suche nach Takopi" +
+        
+      );
+
+    // Embed senden
+    await message.channel.send({ embeds: [embed1] });
+
+    // nichts anderes mehr für diese Nachricht ausführen
+    return;
+  }
+});
 // ------------------------------------------------------
 // MEMBER JOIN EVENT
 // ------------------------------------------------------
