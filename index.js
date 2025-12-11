@@ -751,7 +751,7 @@ Ich bin mir sicher wenn du das schaffst kommen wir näher an Takopi dran`;
       .setTitle("Tag 14: Luft Spiel")
       .setDescription(
         "Filme ein Video wie du alle 5 Level von Gonggi machst und schick sie an Mohammutka. \n" +
-        "Er wird bestätigen ob du es richtig gemacht hast, vielleicht hilft er dir auch weiter bei der Suche nach Takopi" +
+        "Er wird bestätigen ob du es richtig gemacht hast, vielleicht hilft er dir auch weiter bei der Suche nach Takopi"
         
       );
 
