@@ -908,6 +908,7 @@ allen Orten der Welt am glücklichsten.`;
       .setDescription(
         "Kennst du es nicht auch wenn deine ganzen Streichhölzer verloren gehen und du sie wieder an der richtigen Stelle plazieren musst? Heute musst du viele Streichhölzer umsortieren, damit Sie richtig liegen. \n\n" +
         "Um auf die Lösung zu kommen, musst du immer die erste Zahl von der neuen Gleichung nehmen."
+        ); 
         
     await message.channel.send({ embeds: [embed1] });
 
