@@ -882,6 +882,87 @@ In einem Frame konnte man sein gesicht leicht erkennen. Ich schicke dir das Bild
 });
 
 // ------------------------------------------------------
+// DAY 21
+// ------------------------------------------------------
+
+client.on("messageCreate", async (message) => {
+  if (message.author.bot) return;
+  if (!message.content) return;
+
+  const content = message.content.toLowerCase();
+
+  if (
+    content === "popcorn shishabar" ||
+    content === "popcorn shisha bar"
+  ) {
+    const text = `Selam Jagi, es sieht so aus als würde Dominik die Wahrheit sagen, ich kann mir nicht vorstellen, dass er seinen Samstagabend wo anders als dort verbringt... 
+
+Ich möchte dir als Trost etwas Popcorn geben. Es ist dafür gedacht es mit Familie oder Freunden zu Teilen, wenn du etwas am schauen bist. Utka-Nuna hofft natürlich, dass du es mit ihr teilst wärend ihr einen süßen Anime schaut und sie in deinen Armen liegt, weil dort fühlt sie sich an
+allen Orten der Welt am glücklichsten.`;
+
+    await message.reply(text);
+
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 21: Streichhölzer")
+      .setDescription(
+        "Kennst du es nicht auch wenn deine ganzen Streichhölzer verloren gehen und du sie wieder an der richtigen Stelle plazieren musst? Heute musst du viele Streichhölzer umsortieren, damit Sie richtig liegen. \n\n" +
+        "Um auf die Lösung zu kommen, musst du immer die erste Zahl von der neuen Gleichung nehmen."
+        
+    await message.channel.send({ embeds: [embed1] });
+
+    // HIER: PDF senden (ohne ZIP)
+    const pdfFile = new AttachmentBuilder("./Streichhölzer.pdf");
+    await message.channel.send({ files: [pdfFile] });
+
+    return; // fertig
+  }
+
+  // andere Checks …
+});
+
+// ------------------------------------------------------
+// DAY 19
+// ------------------------------------------------------
+
+client.on("messageCreate", async (message) => {
+  // Bots ignorieren
+  if (message.author.bot) return;
+
+  const content = message.content.toLowerCase();
+
+ if (content === "bier bomboclat") {
+    const text = `Bomboclat Jagi.
+
+Du fragst dich vielleicht, warum Bomboclat? Weil Bomboclat bist du gutaussehend. Utka-Nuna muss echt glücklich sein mit einem so süßen Freund...
+
+Weil du zur Zeit so am husteln bist, möchte ich dir dieses Bierchen geben. Ich hoffe du erhältst diese Nachricht nicht zu spät *quak* weil du sollst das Bierchen jetzt in den Kühlschrank stellen, damit du heute Abend nach Arbeit/Uni dir ein geiles kühlen Bierchen gönnen kannst.
+
+Du hast es verdient.`;
+
+    // normale Antwort
+    await message.reply(text);
+
+    // Embed bauen
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 19: The August Before")
+      .setDescription(
+        "Du musst zurück in den letzten August und dort dein Zimmer aufräumen. " +
+        "Irgendwo unter deinen Dingen wirst du ein Gegenstand in Bezug auf eine Ente finden. \n\n" +
+        "Wohin führt dich die Ente?"
+      );
+
+    // Embed senden
+    await message.channel.send({ embeds: [embed1] });
+
+    // nichts anderes mehr für diese Nachricht ausführen
+    return;
+  }
+});
+
+
+// ------------------------------------------------------
 // MEMBER JOIN EVENT
 // ------------------------------------------------------
 
