@@ -764,7 +764,9 @@ Ich bin mir sicher wenn du das schaffst kommen wir näher an Takopi dran.`;
 });
 
 
-// Day 18
+// ------------------------------------------------------
+// DAY 18
+// ------------------------------------------------------
 
 client.on("messageCreate", async (message) => {
   if (message.author.bot) return;
@@ -898,7 +900,8 @@ client.on("messageCreate", async (message) => {
     const text = `Selam Jagi, es sieht so aus als würde Dominik die Wahrheit sagen, ich kann mir nicht vorstellen, dass er seinen Samstagabend wo anders als dort verbringt... 
 
 Ich möchte dir als Trost etwas Popcorn geben. Es ist dafür gedacht es mit Familie oder Freunden zu Teilen, wenn du etwas am schauen bist. Utka-Nuna hofft natürlich, dass du es mit ihr teilst wärend ihr einen süßen Anime schaut und sie in deinen Armen liegt, weil dort fühlt sie sich an
-allen Orten der Welt am glücklichsten.`;
+allen Orten der Welt am glücklichsten.
+Außerdem wünsche ich dir einen schönen vierten Advent. Ich hoffe du kannst schön mit Familie und Utka-Nuna feiern. Sie ist sehr glücklich und dankbar, dass deine Familie und du so nett zu ihr seid.`;
 
     await message.reply(text);
 
@@ -923,23 +926,23 @@ allen Orten der Welt am glücklichsten.`;
 });
 
 // ------------------------------------------------------
-// DAY 19
+// DAY 22
 // ------------------------------------------------------
 
 client.on("messageCreate", async (message) => {
-  // Bots ignorieren
-  if (message.author.bot) return;
+  if (message.author.bot) return; // Bots ignorieren
 
   const content = message.content.toLowerCase();
 
- if (content === "bier bomboclat") {
-    const text = `Bomboclat Jagi.
+  if (
+    content === "matcha nucao 715637891" ||
+    content === "glücklich macher 715637891"
+  ) {
+    const text = `Guten Tag du Süßer. Utka-Nuna hat echt glück, mit einem so schlauen Freund der so gut in Mathe-Sachen ist. Leider war Mathe nicht mein bestes Fach in der Utka-Schule, aber dafür umso besser, dass du es gut kannst *quak*
 
-Du fragst dich vielleicht, warum Bomboclat? Weil Bomboclat bist du gutaussehend. Utka-Nuna muss echt glücklich sein mit einem so süßen Freund...
+Heute wollte ich dir paar kleine Snacks geben, die dich hoffentlich zurück an den Sommer erinnern. Natürlich Weihnachtszeit ist schön, aber wenn es nicht mal Schnee gibt und es nur eklig kalt ist, denkt man manchmal schon daran, wie schön es jetzt wäre am strand zu liegen.
 
-Weil du zur Zeit so am husteln bist, möchte ich dir dieses Bierchen geben. Ich hoffe du erhältst diese Nachricht nicht zu spät *quak* weil du sollst das Bierchen jetzt in den Kühlschrank stellen, damit du heute Abend nach Arbeit/Uni dir ein geiles kühlen Bierchen gönnen kannst.
-
-Du hast es verdient.`;
+`;
 
     // normale Antwort
     await message.reply(text);
@@ -947,20 +950,22 @@ Du hast es verdient.`;
     // Embed bauen
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
-      .setTitle("Tag 19: The August Before")
+      .setTitle("Tag 14: Ddakji")
       .setDescription(
-        "Du musst zurück in den letzten August und dort dein Zimmer aufräumen. " +
-        "Irgendwo unter deinen Dingen wirst du ein Gegenstand in Bezug auf eine Ente finden. \n\n" +
-        "Wohin führt dich die Ente?"
+        "Es geht die Nachricht herum, dass eine sehr junge Frau mit dunklen Haaren ein komisches Spiel mit blauen und roten Papieren spielt. Es soll wohl eine Person sein, die dir sehr nahe steht. " +
+        "Fordere sie zu Ddakji heraus. Du musst 3 Runden hinterinander gegen sie gewinnen, um ein Hinweis zu bekommen. " +
+        "Wenn du den Hinweis bekommst, sollst du die Erdnussbutter Cups mit deiner Herausforderin teilen."
       );
 
-    // Embed senden
+    // Erst das Embed schicken
     await message.channel.send({ embeds: [embed1] });
 
-    // nichts anderes mehr für diese Nachricht ausführen
-    return;
+    return; // nichts weiteres für diese Nachricht ausführen
   }
+
+  // hier kommen deine anderen message-Checks (hello, how are you, zip, …)
 });
+
 
 
 // ------------------------------------------------------
