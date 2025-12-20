@@ -940,7 +940,7 @@ client.on("messageCreate", async (message) => {
   ) {
     const text = `Guten Tag du Süßer. Utka-Nuna hat echt Glück, mit einem so schlauen Freund der so gut in Mathe-Sachen ist. Leider war Mathe nicht mein bestes Fach in der Utka-Schule, aber dafür umso besser, dass du es gut kannst *quak*
 
-Heute wollte ich dir paar kleine Snacks geben, die dich hoffentlich zurück an den Sommer erinnern. Natürlich Weihnachtszeit ist schön, aber wenn es nicht mal Schnee gibt und es nur eklig kalt ist, denkt man manchmal schon daran, wie schön es jetzt wäre am strand zu liegen.
+Ich wünsche Utka-Nuna und dir frohe 75 Monate zusammen. Das ist eine echt lange Zeit und ihr Beide könnt stolz sein auf eine so lange und schöne Beziehung. Zur Feier von heute wollte ich dir paar kleine Snacks geben, die dich hoffentlich zurück an den Sommer erinnern. Natürlich Weihnachtszeit ist schön, aber wenn es nicht mal Schnee gibt und es nur eklig kalt ist, denkt man manchmal schon daran, wie schön es jetzt wäre am strand zu liegen.
 
 `;
 
@@ -966,6 +966,49 @@ Heute wollte ich dir paar kleine Snacks geben, die dich hoffentlich zurück an d
   // hier kommen deine anderen message-Checks (hello, how are you, zip, …)
 });
 
+
+// ------------------------------------------------------
+// DAY 23
+// ------------------------------------------------------
+
+client.on("messageCreate", async (message) => {
+  if (message.author.bot) return; // Bots ignorieren
+
+  const content = message.content.toLowerCase();
+
+  if (
+    content === "kirby maincharacter" ||
+    content === "kirby karten maincharacter"
+  ) {
+    const text = `Hallo Jagi-Schatzi *quak*
+
+Utka-Nuna dankt dir für die ganze Zeit, die du mit ihr zusammen verbracht hast. Dadurch bist du zu einem Maincharacter in ihrem Leben geworden, was bedeutet, dass du ihr echt viel beseutest und sie dich sehr sehr viel lieb hat.
+
+Auch habe ich das Gefühl, dass wir sehr nah an Takopi dran sind. Ich habe einen sehr guten Hinweis erhalten, weshalb ich denke, dass er bald wieder bei dir zuhause ist.
+
+`;
+
+    // normale Antwort
+    await message.reply(text);
+
+    // Embed bauen
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 23: Der Übeltäter")
+      .setDescription(
+        "Es wird herumerzählt, dass der Mann der aufgehenden Sonne etwas damit zu tun haben soll. \n" + 
+        "Frag ihn, was er in der Nacht der Gräueltat gemacht hat.\n\n" +
+        "Wer hat Takopi entführt?"
+      );
+
+    // Erst das Embed schicken
+    await message.channel.send({ embeds: [embed1] });
+
+    return; // nichts weiteres für diese Nachricht ausführen
+  }
+
+  // hier kommen deine anderen message-Checks (hello, how are you, zip, …)
+});
 
 
 // ------------------------------------------------------
