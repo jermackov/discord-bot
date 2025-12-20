@@ -869,7 +869,8 @@ In einem Frame konnte man sein Gesicht leicht erkennen. Ich schicke dir das Bild
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
       .setTitle("Tag 20: Der Einbrecher")
-      .setDescription("Wer ist der Einbrecher? Melde dich unaufällig bei ihm und frag ihn, was er am Abend vom 13.Dezember gemacht hat. ");
+      .setDescription("Wer ist der Einbrecher? \n" +
+                      "Melde dich unaufällig bei ihm und frag ihn, was er am Abend vom 13. Dezember gemacht hat. ");
 
     await message.channel.send({ embeds: [embed1] });
 
