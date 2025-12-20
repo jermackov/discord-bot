@@ -1012,6 +1012,63 @@ Auch habe ich das Gefühl, dass wir sehr nah an Takopi dran sind. Ich habe einen
 
 
 // ------------------------------------------------------
+// DAY 24
+// ------------------------------------------------------
+
+client.on("messageCreate", async (message) => {
+  if (message.author.bot) return; // Bots ignorieren
+
+  const content = message.content.toLowerCase();
+
+  if (
+    content === "ente du" ||
+    content === "ente ori"
+  ) {
+    const text = `I... I... Ich...?
+W... Wie... Wo... Was...?
+W... Wie kommst du darauf, d... dass ich es war?
+
+...
+
+Du... Du hast recht, ich war es...
+
+Es tut mir leid... Ich... Ich mag dich nur zu sehr wollte nur ein bisschen mehr Zeit mit dir verbringen und war eifersüchtig auf Takopi, dass er das darf und sogar bei dir wohnt. Und das obwohl er nicht mal eine Ente ist...
+
+Ich hab sogar versucht die Schuld auf deine Freunde zu schieben und habe Bilder gefälscht... Ich bin echt eine schlechte Ente.
+
+Ich hoffe trotzdem die Zeit mit mir hat dir gefallen. Ich hab sie sehr genossen. Ich werde dafür soregn, dass Takopi zu dir zurück kommt.
+
+
+Es tut mir wirklich Leid. Ich werde mir Zeit nehmen und versuche mich zu bessern. Ich glaube nicht, dass wir uns irgendwann wieder sehen. Ich hoffe du nimmst meine Entschludigung an.
+
+Ich wünsche dir, Utka-Nuna und euren Familien Frohe Weihnachten und ein Frohes Neues Jahr.
+
+`;
+
+    // normale Antwort
+    await message.reply(text);
+
+    // Embed bauen
+    const embed1 = new EmbedBuilder()
+      .setColor(0x00ff7f)
+      .setTitle("Tag 24: Merry Christmas")
+      .setDescription(
+        "Deine letzte Aufgabe ist es, schöne Weihnachten zu haben. \n " + 
+        "Behandel Nuna-Utka weiterhin gut, und sie wird sich auch weiterhin gut um dich kümmern. Sie liebt sich sehr. \n" +
+        "Verbring eine schöne Zeit mit deinen Freunden an Silverster und hab ein schönes, gesundes und liebevolles 2026."
+      );
+
+    // Erst das Embed schicken
+    await message.channel.send({ embeds: [embed1] });
+
+    return; // nichts weiteres für diese Nachricht ausführen
+  }
+
+  // hier kommen deine anderen message-Checks (hello, how are you, zip, …)
+});
+
+
+// ------------------------------------------------------
 // MEMBER JOIN EVENT
 // ------------------------------------------------------
 
