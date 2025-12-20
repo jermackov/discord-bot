@@ -862,7 +862,7 @@ client.on("messageCreate", async (message) => {
     const text = `JAGI ICH HABS! Ich weiß jetzt was mit Kamera gemeint ist! 
 
 Ich glaub wir wissen jetzt wo Takopi ist, oder besser gesagt, wer ihn entführt hat. Mit Kamera war die Überwachungskamera in deinem Zimmer gemeint. Ich habe mir mal die Aufnahmen von dem Abend des Geschehens angeschaut und hab gesehen, wie jemand in dein Zimmer eingebrochen ist!!!!
-In einem Frame konnte man sein gesicht leicht erkennen. Ich schicke dir das Bild, vielleicht erkennst du ihn ja. `;
+In einem Frame konnte man sein Gesicht leicht erkennen. Ich schicke dir das Bild, vielleicht erkennst du ihn ja. `;
 
     await message.reply(text);
 
