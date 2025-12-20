@@ -952,8 +952,8 @@ Heute wollte ich dir paar kleine Snacks geben, die dich hoffentlich zurück an d
       .setColor(0x00ff7f)
       .setTitle("Tag 22: Hidden Message")
       .setDescription(
-        "Utka-Nuna hat sehr viel Arbeit in das Erstellen dieser ganzen Texte und Dateien gesteckt. \n\n" +
-        "Doch irgendwo in den Dateien hat sich ein unsichtbarer Text eingeschlichen. " +
+        "Utka-Nuna hat sehr viel Arbeit in das Erstellen dieser ganzen Texte und Dateien gesteckt. \n" + 
+        "Doch irgendwo in den Dateien hat sich ein unsichtbarer Text eingeschlichen.\n\n" +
         "Wer bist du?"
       );
 
