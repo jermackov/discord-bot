@@ -938,7 +938,7 @@ client.on("messageCreate", async (message) => {
     content === "matcha nucao 715637891" ||
     content === "glücklich macher 715637891"
   ) {
-    const text = `Guten Tag du Süßer. Utka-Nuna hat echt glück, mit einem so schlauen Freund der so gut in Mathe-Sachen ist. Leider war Mathe nicht mein bestes Fach in der Utka-Schule, aber dafür umso besser, dass du es gut kannst *quak*
+    const text = `Guten Tag du Süßer. Utka-Nuna hat echt Glück, mit einem so schlauen Freund der so gut in Mathe-Sachen ist. Leider war Mathe nicht mein bestes Fach in der Utka-Schule, aber dafür umso besser, dass du es gut kannst *quak*
 
 Heute wollte ich dir paar kleine Snacks geben, die dich hoffentlich zurück an den Sommer erinnern. Natürlich Weihnachtszeit ist schön, aber wenn es nicht mal Schnee gibt und es nur eklig kalt ist, denkt man manchmal schon daran, wie schön es jetzt wäre am strand zu liegen.
 
@@ -950,11 +950,11 @@ Heute wollte ich dir paar kleine Snacks geben, die dich hoffentlich zurück an d
     // Embed bauen
     const embed1 = new EmbedBuilder()
       .setColor(0x00ff7f)
-      .setTitle("Tag 14: Ddakji")
+      .setTitle("Tag 22: Hidden Message")
       .setDescription(
-        "Es geht die Nachricht herum, dass eine sehr junge Frau mit dunklen Haaren ein komisches Spiel mit blauen und roten Papieren spielt. Es soll wohl eine Person sein, die dir sehr nahe steht. " +
-        "Fordere sie zu Ddakji heraus. Du musst 3 Runden hinterinander gegen sie gewinnen, um ein Hinweis zu bekommen. " +
-        "Wenn du den Hinweis bekommst, sollst du die Erdnussbutter Cups mit deiner Herausforderin teilen."
+        "Utka-Nuna hat sehr viel Arbeit in das Erstellen dieser ganzen Texte und Dateien gesteckt. \n\n" +
+        "Doch irgendwo in den Dateien hat sich ein unsichtbarer Text eingeschlichen. " +
+        "Wer bist du?"
       );
 
     // Erst das Embed schicken
