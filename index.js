@@ -987,6 +987,8 @@ Utka-Nuna dankt dir für die ganze Zeit, die du mit ihr zusammen verbracht hast.
 
 Auch habe ich das Gefühl, dass wir sehr nah an Takopi dran sind. Ich habe einen sehr guten Hinweis erhalten, weshalb ich denke, dass er bald wieder bei dir zuhause ist.
 
+Achja außerdem wollte ich dir diese Karten schenken, damit du, wenn du mit Freunden spielst, mit deinen eigenen coolen Karten flexen kannst. Und Kirby sieht ja auch bisschen aus wie Takopi, hoffentlich tröstet dich das ein bisschen *quak*
+
 `;
 
     // normale Antwort
